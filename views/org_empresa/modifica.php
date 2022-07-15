@@ -21,7 +21,7 @@
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Siguiente</button>
                     </div>
-
+                    
                 </div>
             </form>
         </div>
