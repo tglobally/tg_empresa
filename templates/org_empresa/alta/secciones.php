@@ -13,10 +13,9 @@
             </button>
             <hr class="hr-menu-lateral">
             <button class="btn btn-default menu-lateral">
-                <img src="img/2.gris.svg" class="numero"> <span class="texto-menu-lateral">Generales</span>
+                <img src="img/2.gris.svg" class="numero"> <span class="texto-menu-lateral">Ubicacion</span>
 
             </button>
-
 
         </div>
 
