@@ -7,10 +7,13 @@
 .secciones{
     padding: 25px;
     background-color: #eaeaea;
-    height: 100vh
+    height: 90vh
 }
 .int_secciones h3{
     color: #0B0595;
+
+    padding-top: 70px;
+
 }
 .formulario{
     background-color: #fff;
@@ -40,4 +43,19 @@ h3{
     background-color: #000098;
     border-color: #000098;
     border-radius: 4px;
+}
+
+.seccion{
+    height: 75vh;
+    padding: 0;
+
+}
+.img-seccion{
+    width: 180px !important;
+    max-width: 180px;
+    padding: 0;
+}
+.menu-seccion-1{
+
+
 }
