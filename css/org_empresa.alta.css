@@ -62,10 +62,25 @@ h3{
 }
 .numero{
     width: 25px;
-    padding-bottom: 3px;
 
 }
 .menu-lateral{
     border: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: -1px;
+
+
+}
+.hr-menu-lateral{
+    height: 20px;
+    width:.01vw;
+    border-width:0;
+    color:#000;
+    background-color:#ccc;
+    margin-left: 24px;
+    margin-bottom: 0;
+    margin-top: 0px;
+
 
 }

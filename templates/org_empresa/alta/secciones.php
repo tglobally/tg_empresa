@@ -6,11 +6,15 @@
         </div>
         <div class="col-md-8">
             <h3>Alta de empresas</h3>
+
             <button class="btn btn-default menu-lateral">
                 <img src="img/1.azul.svg" class="numero"> <span class="texto-menu-lateral">Generales</span>
+
             </button>
+            <hr class="hr-menu-lateral">
             <button class="btn btn-default menu-lateral">
                 <img src="img/2.gris.svg" class="numero"> <span class="texto-menu-lateral">Generales</span>
+
             </button>
 
 
