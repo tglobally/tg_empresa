@@ -69,8 +69,9 @@ h3{
     padding-top: 0px;
     padding-bottom: 0px;
     margin-top: -1px;
-
-
+}
+.menu-lateral-active{
+    color: #000098;;
 }
 .hr-menu-lateral{
     height: 20px;
