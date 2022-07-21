@@ -53,11 +53,11 @@
         "gamboa.martin/services": "dev-main",
         "gamboa.martin/template": "dev-main",
         "gamboa.martin/system": "dev-main",
-        "gamboa.martin/template_1": "dev-main",
         "gamboa.martin/cat_sat": "dev-main",
         "gamboa.martin/organigrama": "dev-main",
         "gamboa.martin/direccion_postal": "dev-main",
-        "tglobally/template_tg": "dev-main"
+        "tglobally/template_tg": "dev-main",
+        "gamboa.martin/template_1": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"

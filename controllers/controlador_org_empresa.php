@@ -11,8 +11,6 @@ namespace controllers;
 use gamboamartin\errores\errores;
 use gamboamartin\system\init;
 use html\org_empresa_html;
-use links\secciones\link_org_empresa;
-use models\org_empresa;
 use PDO;
 use stdClass;
 use tglobally\template_tg\html;
@@ -34,14 +32,7 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
         if(errores::$error){
             return $this->retorno_error(mensaje: 'Error al generar template',data:  $r_alta, header: $header,ws:$ws);
         }
-        $html_base = new html();
 
-        $inputs = (new org_empresa_html(html: $html_base))->genera_inputs_alta(controler: $this, link: $this->link);
-        if(errores::$error){
-            $error = $this->errores->error(mensaje: 'Error al generar inputs',data:  $inputs);
-            print_r($error);
-            die('Error');
-        }
         return $r_alta;
 
     }
