@@ -1,5 +1,5 @@
 <?php /** @var controllers\controlador_org_empresa $controlador */ ?>
-<?php include 'templates/org_empresa/alta/secciones.php'; ?>
+<?php include 'templates/org_empresa/modifica/secciones.php'; ?>
 <div class="col-md-9 formulario">
     <div class="col-lg-12">
 
