@@ -43,7 +43,7 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
         return $r_alta_bd;
     }
 
-    
+
 
 
 }
