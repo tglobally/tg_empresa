@@ -6,7 +6,7 @@
         <h3 class="text-center titulo-form">Hola, Nombre Usuario </h3>
 
         <div class="  form-main" id="form">
-            <form method="post" action="./index.php?seccion=org_empresa&accion=modifica_generales&session_id=<?php echo $controlador->session_id; ?>" class="form-additional">
+            <form method="post" action="./index.php?seccion=org_empresa&accion=modifica_generales&session_id=<?php echo $controlador->session_id; ?>&registro_id=<?php echo $controlador->registro_id; ?>" class="form-additional">
                 <?php echo $controlador->inputs->codigo; ?>
                 <?php echo $controlador->inputs->rfc; ?>
                 <?php echo $controlador->inputs->razon_social; ?>
