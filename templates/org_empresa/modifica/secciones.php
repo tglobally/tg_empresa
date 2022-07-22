@@ -10,7 +10,7 @@
 
             <button class="btn btn-default menu-lateral menu-lateral-active">
                 <img src="img/1.azul.svg" class="numero">
-                <?php include "templates/org_empresa/texto_menu_lateral/modifica.php"; ?>
+                <?php include "templates/org_empresa/_base/texto_menu_lateral/modifica.php"; ?>
 
             </button>
             <hr class="hr-menu-lateral">
