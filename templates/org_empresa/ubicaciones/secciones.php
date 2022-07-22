@@ -15,8 +15,8 @@
             <hr class="hr-menu-lateral">
 
                 <button class="btn btn-default menu-lateral menu-lateral-active">
-                    <?php include "templates/org_empresa/_base/numero/2.azul.php"; ?>
-                    <?php include "templates/org_empresa/_base/texto_menu_lateral/ubicacion.php"; ?>
+                    <?php include "templates/org_empresa/_base/buttons/2.azul.php"; ?>
+
                 </button>
 
         </div>
