@@ -9,7 +9,8 @@
             <h3>Empresas</h3>
             <a href="index.php?seccion=org_empresa&accion=modifica&registro_id=<?php echo $controlador->registro_id; ?>&session_id=<?php echo $controlador->session_id; ?>">
             <button class="btn btn-default  menu-lateral">
-                <img src="img/1.gris.svg" class="numero"> <span class="texto-menu-lateral">Generales</span>
+                <img src="img/1.gris.svg" class="numero">
+                <?php include "templates/org_empresa/texto_menu_lateral/modifica.php"; ?>
             </button>
             </a>
             <hr class="hr-menu-lateral">
