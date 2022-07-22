@@ -10,7 +10,6 @@ namespace controllers;
 
 use gamboamartin\errores\errores;
 use gamboamartin\system\init;
-use html\org_empresa_html;
 use PDO;
 use stdClass;
 use tglobally\template_tg\html;
