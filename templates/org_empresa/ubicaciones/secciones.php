@@ -9,16 +9,13 @@
             <h3>Empresas</h3>
             <a href="index.php?seccion=org_empresa&accion=modifica&registro_id=<?php echo $controlador->registro_id; ?>&session_id=<?php echo $controlador->session_id; ?>">
             <button class="btn btn-default  menu-lateral">
-                <?php include "templates/org_empresa/_base/buttons/1.gris.php"; ?>
+                <?php include "templates/org_empresa/_base/buttons/_1.gris.php"; ?>
             </button>
             </a>
             <hr class="hr-menu-lateral">
-
-                <button class="btn btn-default menu-lateral menu-lateral-active">
-                    <?php include "templates/org_empresa/_base/buttons/2.azul.php"; ?>
-
-                </button>
-
+            <button class="btn btn-default menu-lateral menu-lateral-active">
+                <?php include "templates/org_empresa/_base/buttons/_2.azul.php"; ?>
+            </button>
         </div>
     </div>
 </div>

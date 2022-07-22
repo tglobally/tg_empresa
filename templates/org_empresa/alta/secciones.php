@@ -8,12 +8,12 @@
             <h3>Alta de empresas</h3>
 
             <button class="btn btn-default menu-lateral menu-lateral-active">
-                <?php include "templates/org_empresa/_base/buttons/1.gris.php"; ?>
+                <?php include "templates/org_empresa/_base/buttons/_1.gris.php"; ?>
 
             </button>
             <hr class="hr-menu-lateral">
             <button class="btn btn-default menu-lateral">
-                <?php include "templates/org_empresa/_base/buttons/2.gris.php"; ?>
+                <?php include "templates/org_empresa/_base/buttons/_2.gris.php"; ?>
             </button>
 
         </div>
