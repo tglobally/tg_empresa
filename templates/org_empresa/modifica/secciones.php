@@ -9,7 +9,7 @@
             <h3>Empresas</h3>
 
             <button class="btn btn-default menu-lateral menu-lateral-active">
-                <img src="img/1.azul.svg" class="numero">
+                <?php include "templates/org_empresa/_base/numero/1.azul.php"; ?>
                 <?php include "templates/org_empresa/_base/texto_menu_lateral/modifica.php"; ?>
 
             </button>
