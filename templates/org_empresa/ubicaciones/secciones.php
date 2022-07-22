@@ -16,7 +16,7 @@
             <hr class="hr-menu-lateral">
 
                 <button class="btn btn-default menu-lateral menu-lateral-active">
-                    <img src="img/2.azul.svg" class="numero">
+                    <?php include "templates/org_empresa/_base/numero/2.azul.php"; ?>
                     <?php include "templates/org_empresa/_base/texto_menu_lateral/ubicacion.php"; ?>
                 </button>
 
