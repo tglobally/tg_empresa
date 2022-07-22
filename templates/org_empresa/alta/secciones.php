@@ -6,12 +6,9 @@
         </div>
         <div class="col-md-8">
             <h3>Alta de empresas</h3>
-
             <?php include "templates/org_empresa/_base/buttons/1.gris.php"; ?>
-
             <hr class="hr-menu-lateral">
             <?php include "templates/org_empresa/_base/buttons/2.gris.php"; ?>
-
         </div>
 
     </div>
