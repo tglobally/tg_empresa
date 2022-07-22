@@ -16,7 +16,8 @@
             <hr class="hr-menu-lateral">
             <a href="index.php?seccion=org_empresa&accion=ubicacion&registro_id=<?php echo $controlador->registro_id; ?>&session_id=<?php echo $controlador->session_id; ?>">
                 <button class="btn btn-default menu-lateral">
-                    <img src="img/2.gris.svg" class="numero"> <span class="texto-menu-lateral">Ubicacion</span>
+                    <img src="img/2.gris.svg" class="numero">
+                    <?php include "templates/org_empresa/_base/texto_menu_lateral/ubicacion.php"; ?>
                 </button>
             </a>
 
