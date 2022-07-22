@@ -9,10 +9,10 @@
             <h3>Empresas</h3>
 
             <?php include "templates/org_empresa/_base/buttons/1.azul.php"; ?>
+
             <hr class="hr-menu-lateral">
-            <a href="index.php?seccion=org_empresa&accion=ubicacion&registro_id=<?php echo $controlador->registro_id; ?>&session_id=<?php echo $controlador->session_id; ?>">
-                <?php include "templates/org_empresa/_base/buttons/2.gris.php"; ?>
-            </a>
+            
+            <?php include "templates/org_empresa/_base/links/2.php"; ?>
 
 
         </div>
