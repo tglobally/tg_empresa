@@ -7,9 +7,7 @@
         </div>
         <div class="col-md-8">
             <h3>Empresas</h3>
-            <a href="index.php?seccion=org_empresa&accion=modifica&registro_id=<?php echo $controlador->registro_id; ?>&session_id=<?php echo $controlador->session_id; ?>">
-                <?php include "templates/org_empresa/_base/buttons/1.gris.php"; ?>
-            </a>
+            <?php include "templates/org_empresa/_base/links/1.php"; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/org_empresa/_base/buttons/2.azul.php"; ?>
         </div>
