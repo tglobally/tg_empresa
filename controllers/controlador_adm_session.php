@@ -18,6 +18,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public string $include_menu = '';
     public string $mensaje_html = '';
 
+    public string $link_alta_org_empresa = '';
+
     /**
      * Funcion de controlador donde se ejecutaran siempre que haya un acceso denegado
      * @param bool $header Si header es true cualquier error se mostrara en el html y cortara la ejecucion del sistema
@@ -51,6 +53,9 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
         if(errores::$error){
             return $this->retorno_error(mensaje:  'Error al generar template',data: $template, header: $header, ws: $ws);
         }
+
+        $hd = "index.php?seccion=org_empresa&accion=alta&session_id=$this->session_id";
+        $this->link_alta_org_empresa = $hd;
 
         $this->include_menu = (new generales())->path_base;
         $this->include_menu .= 'templates/inicio.php';
