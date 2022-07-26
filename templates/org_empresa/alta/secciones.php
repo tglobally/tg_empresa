@@ -13,6 +13,8 @@
             <?php include "templates/org_empresa/_base/buttons/3.gris.php"; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/org_empresa/_base/buttons/4.gris.php"; ?>
+            <hr class="hr-menu-lateral">
+            <?php include "templates/org_empresa/_base/links/5.php"; ?>
         </div>
 
     </div>
