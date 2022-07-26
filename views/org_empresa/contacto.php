@@ -1,5 +1,5 @@
 <?php /** @var controllers\controlador_org_empresa $controlador */ ?>
-<?php include 'templates/org_empresa/ubicaciones/secciones.php'; ?>
+<?php include 'templates/org_empresa/contacto/secciones.php'; ?>
 <div class="col-md-9 formulario">
     <div class="col-lg-12">
 
