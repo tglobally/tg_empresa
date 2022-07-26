@@ -10,6 +10,10 @@
             <?php include "templates/org_empresa/_base/links/1.php"; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/org_empresa/_base/buttons/2.azul.php"; ?>
+            <hr class="hr-menu-lateral">
+            <?php include "templates/org_empresa/_base/links/3.php"; ?>
+            <hr class="hr-menu-lateral">
+            <?php include "templates/org_empresa/_base/links/4.php"; ?>
         </div>
     </div>
 </div>
