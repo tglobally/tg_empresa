@@ -1,3 +1,8 @@
+<?php
+
+use config\views;
+$url_assets = (new views())->url_icons;
+?>
 <div class="col-md-12 info">
     <div class="col-lg-12 content">
         <h3 class="text-center titulo-form">Hola, Nombre Completo </h3>
@@ -5,43 +10,74 @@
         <div class="col-md-12 mt-3 table-responsive-sm">
 
             <div class="filters">
-                <div class="filter col-md-4 "></div>
-                <div class="search col-md-8 ">
+                <div class="filter col-md-4 acciones_filter">
+                    <a class="icon_inicio_lista">
+                        <img src="<?php echo $url_assets; ?>icons/icon_inicio.svg">
+                    </a>
+                    <a class="icon_back_lista">
+                        <img src="<?php echo $url_assets; ?>icons/icon_back.svg">
+                    </a>
+                    <a class="icon_recargar_lista">
+                        <img src="<?php echo $url_assets; ?>icons/icon_recargar.svg">
+                    </a>
+                    <a class="icon_atras_lista">
+                        <img src="<?php echo $url_assets; ?>icons/icon_pag_atras.svg">
+                    </a>
+                    <p class="paginador">3 de 35</p>
+                    <a class="icon_adelante_lista">
+                        <img src="<?php echo $url_assets; ?>icons/icon_pag_adelante.svg">
+                    </a>
+                </div>
+                <div class="search col-md-8 input_search">
                     <input type="text form-control input">
+                    <img class="input_icon" src="<?php echo $url_assets; ?>icons/icon_lupa.svg">
                 </div>
             </div>
 
             <table class="table table-dark">
                 <thead>
                 <tr>
-                    <th scope="col">Column 1</th>
-                    <th scope="col">Column 1</th>
-                    <th scope="col">Column 1</th>
-                    <th scope="col">Column 1</th>
-                    <th scope="col">Column 1</th>
+                    <th scope="col">Acciones</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">RFC</th>
+                    <th scope="col">Razon Social</th>
+                    <th scope="col">Nombre comercial</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row">1</th>
+                    <th class="colum_accion" scope="row">
+                        <a class="icon_modifica_lista">
+                            <img src="<?php echo $url_assets; ?>icons/icon_modifica.svg">
+                        </a>
+                        <a class="icon_elimina_lista">
+                            <img src="<?php echo $url_assets; ?>icons/icon_elimina.svg">
+                        </a>
+                        <a class="icon_descargar_lista">
+                            <img src="<?php echo $url_assets; ?>icons/icon_descargar.svg">
+                        </a>
+                    </th>
+                    <th>1</th>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
-                    <td>@mdo</td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
+                    <th class="colum_accion" scope="row">
+                        <a class="icon_modifica_lista">
+                            <img src="<?php echo $url_assets; ?>icons/icon_modifica.svg">
+                        </a>
+                        <a class="icon_elimina_lista">
+                            <img src="<?php echo $url_assets; ?>icons/icon_elimina.svg">
+                        </a>
+                        <a class="icon_descargar_lista">
+                            <img src="<?php echo $url_assets; ?>icons/icon_descargar.svg">
+                        </a>
+                    </th>
+                    <th>2</th>
                     <td>Jacob</td>
                     <td>Thornton</td>
                     <td>@fat</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>@mdo</td>
                 </tr>
                 </tbody>
             </table>
