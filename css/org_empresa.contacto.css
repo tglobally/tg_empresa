@@ -93,6 +93,15 @@ h3{
 
 
 }
+.int_secciones>.seccion {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.int_secciones>.seccion>.img-seccion {
+    scale: 1.4;
+}
+
 .control-label{
     letter-spacing: .1rem;
 }

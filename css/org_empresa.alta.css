@@ -81,6 +81,15 @@ h3{
     align-items: center;
     gap: 10px;
 }
+
+.int_secciones>.seccion {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.int_secciones>.seccion>.img-seccion {
+    scale: 1.4;
+}
 .hr-menu-lateral{
     height: 20px;
     width:.01vw;
@@ -90,7 +99,6 @@ h3{
     margin-left: 24px;
     margin-bottom: 0;
     margin-top: 0px;
-
 
 }
 .control-label{
