@@ -1,7 +1,7 @@
 <?php
 
 use config\views;
-$url_assets = (new views())->url_icons;
+$url_icons = (new views())->url_icons;
 ?>
 <div class="col-md-12 info">
     <div class="col-lg-12 content">
@@ -12,25 +12,25 @@ $url_assets = (new views())->url_icons;
             <div class="filters">
                 <div class="filter col-md-4 acciones_filter">
                     <a class="icon_inicio_lista">
-                        <img src="<?php echo $url_assets; ?>icons/icon_inicio.svg">
+                        <img src="<?php echo $url_icons; ?>icon_inicio.svg">
                     </a>
                     <a class="icon_back_lista">
-                        <img src="<?php echo $url_assets; ?>icons/icon_back.svg">
+                        <img src="<?php echo $url_icons; ?>icon_back.svg">
                     </a>
                     <a class="icon_recargar_lista">
-                        <img src="<?php echo $url_assets; ?>icons/icon_recargar.svg">
+                        <img src="<?php echo $url_icons; ?>icon_recargar.svg">
                     </a>
                     <a class="icon_atras_lista">
-                        <img src="<?php echo $url_assets; ?>icons/icon_pag_atras.svg">
+                        <img src="<?php echo $url_icons; ?>icon_pag_atras.svg">
                     </a>
                     <p class="paginador">3 de 35</p>
                     <a class="icon_adelante_lista">
-                        <img src="<?php echo $url_assets; ?>icons/icon_pag_adelante.svg">
+                        <img src="<?php echo $url_icons; ?>icon_pag_adelante.svg">
                     </a>
                 </div>
                 <div class="search col-md-8 input_search">
                     <input type="text form-control input">
-                    <img class="input_icon" src="<?php echo $url_assets; ?>icons/icon_lupa.svg">
+                    <img class="input_icon" src="<?php echo $url_icons; ?>icon_lupa.svg">
                 </div>
             </div>
 
@@ -48,13 +48,13 @@ $url_assets = (new views())->url_icons;
                 <tr>
                     <th class="colum_accion" scope="row">
                         <a class="icon_modifica_lista">
-                            <img src="<?php echo $url_assets; ?>icons/icon_modifica.svg">
+                            <img src="<?php echo $url_icons; ?>icon_modifica.svg">
                         </a>
                         <a class="icon_elimina_lista">
-                            <img src="<?php echo $url_assets; ?>icons/icon_elimina.svg">
+                            <img src="<?php echo $url_icons; ?>icon_elimina.svg">
                         </a>
                         <a class="icon_descargar_lista">
-                            <img src="<?php echo $url_assets; ?>icons/icon_descargar.svg">
+                            <img src="<?php echo $url_icons; ?>icon_descargar.svg">
                         </a>
                     </th>
                     <th>1</th>
@@ -65,13 +65,13 @@ $url_assets = (new views())->url_icons;
                 <tr>
                     <th class="colum_accion" scope="row">
                         <a class="icon_modifica_lista">
-                            <img src="<?php echo $url_assets; ?>icons/icon_modifica.svg">
+                            <img src="<?php echo $url_icons; ?>icon_modifica.svg">
                         </a>
                         <a class="icon_elimina_lista">
-                            <img src="<?php echo $url_assets; ?>icons/icon_elimina.svg">
+                            <img src="<?php echo $url_icons; ?>icon_elimina.svg">
                         </a>
                         <a class="icon_descargar_lista">
-                            <img src="<?php echo $url_assets; ?>icons/icon_descargar.svg">
+                            <img src="<?php echo $url_icons; ?>icon_descargar.svg">
                         </a>
                     </th>
                     <th>2</th>
