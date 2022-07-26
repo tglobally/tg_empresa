@@ -11,9 +11,6 @@
                 <?php echo $controlador->inputs->rfc; ?>
                 <?php echo $controlador->inputs->razon_social; ?>
                 <?php echo $controlador->inputs->nombre_comercial; ?>
-                <?php echo $controlador->inputs->email_sat; ?>
-                <?php echo $controlador->inputs->fecha_inicio_operaciones; ?>
-                <?php echo $controlador->inputs->fecha_ultimo_cambio_sat; ?>
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Guarda</button>
