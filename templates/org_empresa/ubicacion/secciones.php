@@ -1,4 +1,4 @@
-<?php /** @var controllers\controlador_org_empresa $controlador */ ?>
+<?php /** @var controllers\controlador_org_empresa $controlador */ echo "hola"?>
 <div class="col-md-3 secciones">
 
     <div class="col-md-12 int_secciones ">
