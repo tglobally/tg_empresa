@@ -5,18 +5,18 @@
             <img src="img/6.svg" class="img-seccion">
         </div>
         <div class="col-md-8">
-            <h3>Alta de empresas</h3>
-            <?php include "templates/org_empresa/_base/buttons/1.azul.php"; ?>
+            <h3>Empresas</h3>
+            <?php include "templates/org_empresa/_base/links/1.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/buttons/2.gris.php"; ?>
+            <?php include "templates/org_empresa/_base/links/2.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/buttons/3.gris.php"; ?>
+            <?php include "templates/org_empresa/_base/links/3.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/buttons/4.gris.php"; ?>
+            <?php include "templates/org_empresa/_base/links/4.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/buttons/5.gris.php"; ?>
+            <?php include "templates/org_empresa/_base/links/5.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/buttons/6.gris.php"; ?>
+            <?php include "templates/org_empresa/_base/buttons/6.azul.php"; ?>
         </div>
 
     </div>
