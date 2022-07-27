@@ -28,6 +28,36 @@
                     </div>
 
                 </div>
+
+                <div class="cont_tabla_sucursal col-md-12">
+                    <table class="table table-dark">
+                        <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Fecha Inicio Operacion</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Telefono 1</th>
+                            <th scope="col">Telefono 2</th>
+                            <th scope="col">Telefono 3</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach ($controlador->sucursales as $registro){
+                            echo "<tr>";
+                            echo "<td>$registro[org_sucursal_id]</td>";
+                            echo "<td>$registro[org_sucursal_codigo]</td>";
+                            echo "<td>$registro[org_sucursal_fecha_inicio_operaciones]</td>";
+                            echo "<td>$registro[direccion]</td>";
+                            echo "<td>$registro[org_sucursal_telefono_1]</td>";
+                            echo "<td>$registro[org_sucursal_telefono_2]</td>";
+                            echo "<td>$registro[org_sucursal_telefono_3]</td>";
+                            echo "</tr>";
+                        } ?>
+                        </tbody>
+                    </table>
+                </div>
             </form>
         </div>
     </div>

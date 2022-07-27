@@ -105,3 +105,21 @@ h3{
 .control-label{
     letter-spacing: .1rem;
 }
+
+.cont_tabla_sucursal{
+    margin-top: 20px;
+}
+
+.table-dark thead tr{
+    background-color: #F1F2F6;
+    font-family: Helvetica;
+}
+
+.table-dark thead tr th{
+    font-family: Helvetica;
+}
+
+.table-dark thead tr td{
+    font-family: Helvetica;
+}
+
