@@ -3,7 +3,7 @@
 <div class="col-md-9 formulario">
     <div class="col-lg-12">
 
-        <h3 class="text-center titulo-form">Hola, Nombre Usuario </h3>
+        <h3 class="text-center titulo-form">Hola, <?php echo $controlador->datos_session_usuario['adm_usuario_user']; ?> </h3>
 
         <div class="  form-main" id="form">
             <form method="post" action="./index.php?seccion=org_empresa&accion=modifica_cif&session_id=<?php echo $controlador->session_id; ?>&registro_id=<?php echo $controlador->registro_id; ?>" class="form-additional">

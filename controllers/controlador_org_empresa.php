@@ -10,6 +10,7 @@ namespace controllers;
 
 use gamboamartin\errores\errores;
 use gamboamartin\system\init;
+use models\adm_usuario;
 use PDO;
 use stdClass;
 use tglobally\template_tg\html;
@@ -21,6 +22,7 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
         $html_base = new html();
         parent::__construct( link: $link, html: $html_base);
         $this->titulo_lista = 'Empresas';
+
 
     }
 

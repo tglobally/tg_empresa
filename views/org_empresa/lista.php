@@ -1,11 +1,13 @@
+<?php /** @var controllers\controlador_org_empresa $controlador */ ?>
 <?php
 
 use config\views;
 $url_icons = (new views())->url_icons;
 ?>
+
 <div class="col-md-12 info">
     <div class="col-lg-12 content">
-        <h3 class="text-center titulo-form">Hola, Nombre Completo </h3>
+        <h3 class="text-center titulo-form">Hola, <?php echo $controlador->datos_session_usuario['adm_usuario_user']; ?></h3>
 
         <div class="col-md-12 mt-3 table-responsive-sm">
 
