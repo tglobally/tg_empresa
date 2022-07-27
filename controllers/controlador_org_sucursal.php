@@ -10,6 +10,7 @@ namespace controllers;
 
 use gamboamartin\errores\errores;
 use gamboamartin\system\init;
+use models\org_empresa;
 use models\org_sucursal;
 use PDO;
 use stdClass;
@@ -17,6 +18,8 @@ use tglobally\template_tg\html;
 
 class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\controlador_org_sucursal {
     public array $sucursales = array();
+    public string $rfc = '';
+    public string $razon_social = '';
 
     public function __construct(PDO $link, stdClass $paths_conf = new stdClass()){
 
@@ -43,6 +46,15 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
             }
 
             $this->sucursales = $registros;
+
+            $registro = (new org_empresa($this->link))->registro(registro_id: $this->registro_id);
+            if(errores::$error){
+                return $this->retorno_error(mensaje: 'Error al obtener registro empresa',data:  $registro,
+                    header: $header,ws:$ws);
+            }
+
+            $this->rfc = $registro['org_empresa_rfc'];
+            $this->razon_social = $registro['org_empresa_razon_social'];
         }
 
         $r_alta = parent::alta($header, $ws);

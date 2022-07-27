@@ -2,6 +2,12 @@
 <div class="col-md-3 secciones">
 
     <div class="col-md-12 int_secciones ">
+        <div class="col-md-12 ">
+            <h4 class="sub_text_datos">RFC:</h4>
+            <h5 class="text_datos"><?php echo $controlador->rfc;?></h5>
+            <h4 class="sub_text_datos">Razón social:</h4>
+            <h5 class="text_datos"><?php echo $controlador->razon_social;?></h5>
+        </div>
         <div class="col-md-4 seccion">
             <img src="img/4.svg" class="img-seccion">
         </div>

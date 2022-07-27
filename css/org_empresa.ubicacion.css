@@ -4,6 +4,16 @@
     padding: 25px;
 
 }
+
+.sub_text_datos{
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.text_datos{
+    font-family: Helvetica;
+}
+
 .secciones{
     padding: 25px;
     background-color: #eaeaea;
