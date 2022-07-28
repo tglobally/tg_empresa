@@ -8,6 +8,7 @@
 
         <div class="  form-main" id="form">
             <form method="post" action="./index.php?seccion=org_empresa&accion=alta_bd&session_id=<?php echo $controlador->session_id; ?>" class="form-additional">
+                <?php echo $controlador->inputs->select->org_tipo_empresa_id; ?>
                 <?php echo $controlador->inputs->codigo; ?>
                 <?php echo $controlador->inputs->rfc; ?>
                 <?php echo $controlador->inputs->razon_social; ?>
