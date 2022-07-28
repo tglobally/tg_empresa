@@ -17,6 +17,8 @@
             <?php include "templates/org_empresa/_base/buttons/5.gris.php"; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/org_empresa/_base/buttons/6.gris.php"; ?>
+            <hr class="hr-menu-lateral">
+            <?php include "templates/org_empresa/_base/buttons/7.gris.php"; ?>
         </div>
 
     </div>
