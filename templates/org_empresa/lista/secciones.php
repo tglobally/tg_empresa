@@ -4,10 +4,7 @@
 
         <div class="col-md-8">
             <h3>Empresas</h3>
-            <?php include "templates/org_empresa/_base/buttons/1.azul.php"; ?>
-            <hr class="hr-menu-lateral">
-
+            <?php include "templates/org_empresa/_base/links/alta.php"; ?>
         </div>
-
     </div>
 </div>
