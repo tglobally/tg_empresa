@@ -19,10 +19,13 @@
                 <?php echo $controlador->inputs->select->dp_calle_pertenece_entre1_id; ?>
                 <?php echo $controlador->inputs->select->dp_calle_pertenece_entre2_id; ?>
                 <div class="buttons col-md-12">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
+                        <a href="<?php echo $controlador->link_modifica; ?>" role="button" class="btn btn-info btn-guarda col-md-12 " >Generales</a>
+                    </div>
+                    <div class="col-md-4">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Guarda</button>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Siguiente</button>
                     </div>
                     
