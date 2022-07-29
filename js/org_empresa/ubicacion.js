@@ -39,7 +39,7 @@ sl_dp_pais_id.change(function(){
         type: 'GET',
         url: url,
     }).done(function( data ) {  // Función que se ejecuta si todo ha ido bien
-
+console.log(data);
         $.each(data.registros, function( index, dp_estado ) {
             integra_new_option("#dp_estado_id",dp_estado.dp_pais_descripcion+' '+dp_estado.dp_estado_descripcion,dp_estado.dp_estado_id);
         });
@@ -53,7 +53,7 @@ sl_dp_pais_id.change(function(){
 sl_dp_estado_id.change(function(){
     dp_estado_id = $(this).val();
     let url = "index.php?seccion=dp_municipio&ws=1&accion=get_municipio&dp_estado_id="+dp_estado_id+"&session_id="+session_id;
-
+    console.log(url);
     $.ajax({
         type: 'GET',
         url: url,
@@ -96,7 +96,6 @@ sl_dp_cp_id.change(function(){
         type: 'GET',
         url: url,
     }).done(function( data ) {  // Función que se ejecuta si todo ha ido bien
-        console.log(data);
         $.each(data.registros, function( index, dp_colonia_postal ) {
             integra_new_option("#dp_colonia_postal_id",dp_colonia_postal.dp_colonia_descripcion+' '+dp_colonia_postal.dp_cp_descripcion,dp_colonia_postal.dp_colonia_postal_id);
         });
