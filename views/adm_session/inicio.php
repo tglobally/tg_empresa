@@ -19,25 +19,13 @@ $url_assets = (new views())->url_assets;
     <div class="row">
         <div class="col-md-12">
             <div class="col-sm-2">
-                <a href="<?php echo $controlador->link_alta_org_empresa; ?>">
-                    <div class="cont_imagen_accion">
-                        <img src="<?php echo $url_assets; ?>img/inicio/imagen_1.jpg">
-                    </div>
-                    <div class="cont_text_accion">
-                        <h4 class="text_seccion">Empresas</h4>
-                        <h4 class="text_accion">Alta</h4>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-sm-2">
                 <a href="<?php echo $controlador->link_lista_org_empresa; ?>">
                     <div class="cont_imagen_accion">
                         <img src="<?php echo $url_assets; ?>img/inicio/imagen_2.jpg">
                     </div>
                     <div class="cont_text_accion">
                         <h4 class="text_seccion">Empresas</h4>
-                        <h4 class="text_accion">Lista</h4>
+                        <h4 class="text_accion">Catologo</h4>
                     </div>
                 </a>
             </div>
