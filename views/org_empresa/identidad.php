@@ -11,10 +11,10 @@
                 <?php echo $controlador->inputs->logo; ?>
                 <?php echo $controlador->inputs->pagina_web ?>
                 <div class="buttons col-md-12">
-                    <div class="col-md-6">
+                    <div class="col-md-6 btn-ancho">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Guarda</button>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 btn-ancho">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Siguiente</button>
                     </div>
 

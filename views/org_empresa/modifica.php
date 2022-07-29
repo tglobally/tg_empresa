@@ -13,10 +13,10 @@
                 <?php echo $controlador->inputs->razon_social; ?>
                 <?php echo $controlador->inputs->nombre_comercial; ?>
                 <div class="buttons col-md-12">
-                    <div class="col-md-6">
+                    <div class="col-md-6 btn-ancho">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Guarda</button>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 btn-ancho">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Siguiente</button>
                     </div>
                     

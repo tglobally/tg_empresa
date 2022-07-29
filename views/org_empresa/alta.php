@@ -17,7 +17,7 @@
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Guarda</button>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 btn-ancho">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Siguiente</button>
                     </div>
 

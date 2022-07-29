@@ -20,11 +20,11 @@
                 <?php echo $controlador->inputs->telefono_2; ?>
                 <?php echo $controlador->inputs->telefono_3; ?>
                 <div class="buttons col-md-12">
-                    <div class="col-md-6">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Guarda</button>
+                    <div class="col-md-6 " >
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12 btn-ancho" >Guarda</button>
                     </div>
-                    <div class="col-md-6">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Siguiente</button>
+                    <div class="col-md-6 btn-ancho">
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12 btn-ancho" >Siguiente</button>
                     </div>
 
                 </div>
