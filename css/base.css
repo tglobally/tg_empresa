@@ -1,0 +1,11 @@
+.int_secciones{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px;
+
+}
+.secciones{
+    padding: 25px;
+    background-color: #eaeaea;
+    height: 90vh
+}

@@ -1,14 +1,5 @@
-.int_secciones{
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 25px;
+@import "base.css";
 
-}
-.secciones{
-    padding: 25px;
-    background-color: #eaeaea;
-    height: 90vh
-}
 .int_secciones h3{
     color: #0B0595;
 
