@@ -15,10 +15,10 @@
                 <?php echo $controlador->inputs->nombre_comercial; ?>
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="siguiente" value="modifica">Guarda</button>
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="modifica">Guarda</button>
                     </div>
                     <div class="col-md-6 btn-ancho">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="siguiente" value="ubicacion">Siguiente</button>
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="ubicacion">Siguiente</button>
                     </div>
 
                 </div>
