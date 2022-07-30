@@ -21,7 +21,7 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
         $html_base = new html();
         parent::__construct( link: $link, html: $html_base);
         $this->titulo_lista = 'Empresas';
-        
+
 
 
     }
