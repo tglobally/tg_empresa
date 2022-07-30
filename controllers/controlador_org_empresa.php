@@ -23,7 +23,6 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
         $this->titulo_lista = 'Empresas';
 
 
-
     }
 
     public function alta_bd(bool $header, bool $ws = false): array|stdClass
