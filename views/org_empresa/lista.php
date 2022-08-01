@@ -19,9 +19,6 @@ $url_icons = (new views())->url_icons;
                     <a class="icon_inicio_lista">
                         <img src="<?php echo $url_icons; ?>icon_inicio.svg">
                     </a>
-                    <a class="icon_back_lista">
-                        <img src="<?php echo $url_icons; ?>icon_back.svg">
-                    </a>
                     <a class="icon_recargar_lista">
                         <img src="<?php echo $url_icons; ?>icon_recargar.svg">
                     </a>
