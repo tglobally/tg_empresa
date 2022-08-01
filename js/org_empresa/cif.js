@@ -41,4 +41,9 @@ $('.open-overlay').click(function() {
     }
 })
 
+let fecha_inicio_operaciones = $("#fecha_inicio_operaciones");
+let fecha_ultimo_cambio_sat = $("#fecha_ultimo_cambio_sat");
 
+fecha_inicio_operaciones.change(function () {
+    fecha_ultimo_cambio_sat.val(fecha_inicio_operaciones.val());
+});
