@@ -36,7 +36,7 @@
                         </thead>
                         <tbody>
                         <?php
-                        foreach ($controlador->sucursales as $registro){
+                        foreach ($controlador->actividades_economicas as $registro){
                             echo "<tr>";
                             echo "<td>$registro[org_sucursal_id]</td>";
                             echo "<td>$registro[org_sucursal_codigo]</td>";

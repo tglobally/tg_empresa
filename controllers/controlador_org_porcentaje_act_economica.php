@@ -11,6 +11,7 @@ namespace controllers;
 use gamboamartin\errores\errores;
 use gamboamartin\system\init;
 use models\org_empresa;
+use models\org_porcentaje_act_economica;
 use models\org_sucursal;
 use PDO;
 use stdClass;
@@ -18,7 +19,7 @@ use tglobally\template_tg\html;
 
 class controlador_org_porcentaje_act_economica extends \gamboamartin\organigrama\controllers\controlador_org_porcentaje_act_economica {
 
-    public array $sucursales = array();
+    public array $actividades_economicas = array();
     public string $rfc = '';
     public string $razon_social = '';
 
@@ -34,20 +35,22 @@ class controlador_org_porcentaje_act_economica extends \gamboamartin\organigrama
     public function alta(bool $header, bool $ws = false): array|string
     {
         if(isset($this->registro_id) && $this->registro_id > 0){
-            $filtro['org_empresa.id'] = $this->registro_id;
-            $r_org_sucursal = (new org_sucursal($this->link))->filtro_and(filtro: $filtro);
+
+            $filtro['org_porcentaje_act_economica.id'] = $this->registro_id;
+
+            $r_org_porcentaje_act_economica = (new org_porcentaje_act_economica($this->link))->filtro_and(filtro: $filtro);
             if(errores::$error){
-                return $this->retorno_error(mensaje: 'Error al obtener sucursales',data:  $r_org_sucursal,
+                return $this->retorno_error(mensaje: 'Error al obtener actividades economicas',data:  $r_org_porcentaje_act_economica,
                     header: $header,ws:$ws);
             }
 
-            $registros = $this->maqueta_direccion(sucursales: $r_org_sucursal->registros);
+            $registros = $this->maqueta_direccion(actividades_economicas: $r_org_porcentaje_act_economica->registros);
             if(errores::$error){
                 return $this->retorno_error(mensaje: 'Error al maquetar direcciones',data:  $registros,
                     header: $header,ws:$ws);
             }
 
-            $this->sucursales = $registros;
+            $this->actividades_economicas = $registros;
 
             $registro = (new org_empresa($this->link))->registro(registro_id: $this->registro_id);
             if(errores::$error){
@@ -66,14 +69,13 @@ class controlador_org_porcentaje_act_economica extends \gamboamartin\organigrama
         return $r_alta;
     }
 
-    public function maqueta_direccion(array $sucursales){
+    public function maqueta_direccion(array $actividades_economicas){
         $registros = array();
-        foreach ($sucursales as $sucursal){
-            $sucursal['direccion'] = "$sucursal[dp_calle_descripcion] $sucursal[org_sucursal_exterior] ";
-            $sucursal['direccion'] .= "$sucursal[org_sucursal_interior] Col. $sucursal[dp_colonia_descripcion]";
-            $sucursal['direccion'] .= ", $sucursal[dp_municipio_descripcion]  $sucursal[dp_estado_descripcion] ";
-            $sucursal['direccion'] .= "$sucursal[dp_pais_descripcion]";
-            $registros[] = $sucursal;
+        foreach ($actividades_economicas as $actividad_economica){
+            $actividad_economica['porcentaje'] = "$actividad_economica[porcentaje] $actividad_economica[porcentaje] ";
+            $actividad_economica['porcentaje'] .= "$actividad_economica[porcentaje] Col. $actividad_economica[porcentaje]";
+            $actividad_economica['porcentaje'] .= ", $actividad_economica[porcentaje]";
+            $registros[] = $actividad_economica;
         }
 
         return $registros;
