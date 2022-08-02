@@ -71,6 +71,15 @@ input {
     width: 35px;
 }
 
+.icon_xls_lista{
+    padding: 0px 15px;
+}
+
+.icon_xls_lista img{
+    width: 35px;
+}
+
+
 .icon_atras_lista{
     padding: 0 15px;
 }
