@@ -16,14 +16,8 @@ $url_icons = (new views())->url_icons;
 
             <div class="filters">
                 <div class="filter col-md-4 acciones_filter">
-                    <a class="icon_inicio_lista">
-                        <img src="<?php echo $url_icons; ?>icon_inicio.svg">
-                    </a>
                     <a class="icon_xls_lista">
                         <img src="<?php echo $url_icons; ?>icon_xls.png">
-                    </a>
-                    <a class="icon_recargar_lista">
-                        <img src="<?php echo $url_icons; ?>icon_recargar.svg">
                     </a>
                     <a class="icon_atras_lista">
                         <img src="<?php echo $url_icons; ?>icon_pag_atras.svg">
