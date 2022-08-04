@@ -10,7 +10,7 @@
                 <?php echo $controlador->inputs->telefono_1; ?>
                 <?php echo $controlador->inputs->telefono_2; ?>
                 <?php echo $controlador->inputs->telefono_3; ?>
-                <label class="label-alerta-oculto">Alerta del input</label>
+                <label id="label_alerta" class="label-error label-alerta">Alerta del input</label>
                 <div class="buttons col-md-12">
                     <div class="col-md-6 btn-ancho">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Guarda</button>

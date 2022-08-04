@@ -41,12 +41,28 @@ $('.open-overlay').click(function() {
     }
 })
 
-let telefono_txt = $("input[id=telefono_1]");
-let telefono_error = $(".telefono_error");
+
+
+
+$('.form-control').click(function() {
+    let telefono_txt = document.getElementById("telefono_1");
+    let telefono_error = document.getElementById("label_alerta");
+    let telefono = '';
+    let telefono_regex = new RegExp('[1-9][0-9]{9}');
+
+
+    telefono_error.removeClass("label-alerta-oculto");
+    telefono_error.addClass("label-alerta");
+})
+
+
+
+let telefono_txt = document.getElementById("telefono_1");
+let telefono_error = document.getElementById("label_alerta");
 let telefono = '';
 
 let telefono_regex = new RegExp('[1-9][0-9]{9}');
-telefono_error.hide();
+
 
 
 telefono_txt.keyup(function () {
@@ -60,9 +76,11 @@ telefono_txt.keyup(function () {
     }
 
     if(!valido){
-        telefono_error.show();
+        telefono_error.removeClass("label-alerta");
+        telefono_error.addClass("label-alerta-oculto");
     } else {
-        telefono_error.hide();
+        telefono_error.removeClass("label-alerta-oculto");
+        telefono_error.addClass("label-alerta");
     }
 
 });
