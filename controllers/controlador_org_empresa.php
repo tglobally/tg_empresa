@@ -6,8 +6,7 @@
  * @final En proceso
  *
  */
-namespace controllers;
-
+namespace tglobally\tg_empresa\controllers;
 use gamboamartin\errores\errores;
 use gamboamartin\system\init;
 use JsonException;
@@ -31,6 +30,7 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
      */
     public function modifica_ubicacion(bool $header, bool $ws): array|stdClass
     {
+
         $keys = array('dp_pais_id','dp_estado_id','dp_municipio_id','dp_cp_id','dp_colonia_postal_id');
         $_POST = (new init())->limpia_rows(keys: $keys,row:  $_POST);
         if(errores::$error){
