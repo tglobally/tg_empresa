@@ -41,4 +41,28 @@ $('.open-overlay').click(function() {
     }
 })
 
+let telefono_txt = $("input[id=telefono_1]");
+let telefono_error = $(".telefono_error");
+let telefono = '';
 
+let telefono_regex = new RegExp('[1-9][0-9]{9}');
+telefono_error.hide();
+
+
+telefono_txt.keyup(function () {
+    telefono = $(this).val();
+    let valido = false;
+    let regex_val = telefono_regex.test(telefono);
+    let n_car = telefono.length;
+
+    if(n_car<=10 && regex_val){
+        valido = true;
+    }
+
+    if(!valido){
+        telefono_error.show();
+    } else {
+        telefono_error.hide();
+    }
+
+});
