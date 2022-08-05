@@ -44,40 +44,26 @@ $url_icons = (new views())->url_icons;
                 </tr>
                 </thead>
                 <tbody>
+                <?php foreach ($controlador->registros as $registro){
+
+                    ?>
                 <tr>
                     <th class="colum_accion" scope="row">
-                        <a class="icon_modifica_lista">
+                        <a class="icon_modifica_lista" href="<?php echo $registro->link_modifica; ?>">
                             <img src="<?php echo $url_icons; ?>icon_modifica.svg">
                         </a>
-                        <a class="icon_elimina_lista">
+                        <a class="icon_elimina_lista" href="<?php echo $registro->link_elimina_bd; ?>">
                             <img src="<?php echo $url_icons; ?>icon_elimina.svg">
                         </a>
-                        <a class="icon_descargar_lista">
-                            <img src="<?php echo $url_icons; ?>icon_descargar.svg">
-                        </a>
+
                     </th>
-                    <th>1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th><?php echo $registro->org_empresa_id; ?></th>
+                    <th><?php echo $registro->org_empresa_rfc; ?></th>
+                    <th><?php echo $registro->org_empresa_razon_social; ?></th>
+                    <th><?php echo $registro->org_empresa_nombre_comercial; ?></th>
                 </tr>
-                <tr>
-                    <th class="colum_accion" scope="row">
-                        <a class="icon_modifica_lista">
-                            <img src="<?php echo $url_icons; ?>icon_modifica.svg">
-                        </a>
-                        <a class="icon_elimina_lista">
-                            <img src="<?php echo $url_icons; ?>icon_elimina.svg">
-                        </a>
-                        <a class="icon_descargar_lista">
-                            <img src="<?php echo $url_icons; ?>icon_descargar.svg">
-                        </a>
-                    </th>
-                    <th>2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
+                <?php } ?>
+
                 </tbody>
             </table>
         </div>
