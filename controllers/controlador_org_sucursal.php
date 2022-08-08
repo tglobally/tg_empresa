@@ -64,6 +64,21 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
         return $r_alta;
     }
 
+    public function alta_bd(bool $header, bool $ws = false): array|stdClass
+    {
+        $registro_id = $this->registro_id;
+
+        $r_alta_bd = parent::alta_bd(header: false, ws: $ws);
+        if(errores::$error){
+            return $this->retorno_error(mensaje: 'Error al maquetar alta',data:  $r_alta_bd, header: $header,ws:$ws);
+        }
+
+        if($r_alta_bd->registro_id > 0) {
+            header('Location: index.php?seccion=org_sucursal&accion=alta&registro_id='.$registro_id.'&session_id='.$this->session_id);
+        }
+        return $r_alta_bd;
+    }
+
     public function maqueta_direccion(array $sucursales){
         $registros = array();
         foreach ($sucursales as $sucursal){
