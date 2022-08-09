@@ -82,13 +82,19 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
         return $r_alta_bd;
     }
 
-    public function maqueta_direccion(array $sucursales){
+    /**
+     * Maqueta las sucursales de una empresa
+     * @param array $sucursales Sucursales asignadas a empresa
+     * @return array
+     */
+    public function maqueta_direccion(array $sucursales): array
+    {
         $registros = array();
         foreach ($sucursales as $sucursal){
             $sucursal['direccion'] = "$sucursal[dp_calle_descripcion] $sucursal[org_sucursal_exterior] ";
             $sucursal['direccion'] .= "$sucursal[org_sucursal_interior] Col. $sucursal[dp_colonia_descripcion]";
             $sucursal['direccion'] .= ", $sucursal[dp_municipio_descripcion]  $sucursal[dp_estado_descripcion] ";
-            $sucursal['direccion'] .= "$sucursal[dp_pais_descripcion]";
+            $sucursal['direccion'] .= " $sucursal[dp_pais_descripcion] ";
             $registros[] = $sucursal;
         }
 
