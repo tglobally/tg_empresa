@@ -29,7 +29,7 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
 
     }
 
-    public function alta(bool $header, bool $ws = false): array|string
+    public function alta(bool $header, bool $ws = false, bool $org_empresa_id_disabled = false): array|string
     {
 
         if(isset($_GET['org_empresa_id'])){
@@ -60,7 +60,7 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
         }
 
 
-        $r_alta = parent::alta($header, $ws);
+        $r_alta = parent::alta($header, $ws, true);
         if(errores::$error){
             return $this->retorno_error(mensaje: 'Error al maquetar alta',data:  $r_alta, header: $header,ws:$ws);
         }
