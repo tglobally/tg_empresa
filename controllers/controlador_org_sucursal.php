@@ -29,10 +29,12 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
 
     }
 
-    public function alta(bool $header, bool $ws = false): array|string
+    public function alta(bool $header, bool $ws = false, bool $org_empresa_id_disabled = false): array|string
     {
-        if(isset($this->registro_id) && $this->registro_id > 0){
-            $filtro['org_empresa.id'] = $this->registro_id;
+
+        if(isset($_GET['org_empresa_id'])){
+            $this->org_empresa_id = $_GET['org_empresa_id'];
+            $filtro['org_empresa.id'] = $this->org_empresa_id;
             $r_org_sucursal = (new org_sucursal($this->link))->filtro_and(filtro: $filtro);
             if(errores::$error){
                 return $this->retorno_error(mensaje: 'Error al obtener sucursales',data:  $r_org_sucursal,
@@ -47,7 +49,7 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
 
             $this->sucursales = $registros;
 
-            $registro = (new org_empresa($this->link))->registro(registro_id: $this->registro_id);
+            $registro = (new org_empresa($this->link))->registro(registro_id: $this->org_empresa_id);
             if(errores::$error){
                 return $this->retorno_error(mensaje: 'Error al obtener registro empresa',data:  $registro,
                     header: $header,ws:$ws);
@@ -57,7 +59,8 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
             $this->razon_social = $registro['org_empresa_razon_social'];
         }
 
-        $r_alta = parent::alta($header, $ws);
+
+        $r_alta = parent::alta($header, $ws, true);
         if(errores::$error){
             return $this->retorno_error(mensaje: 'Error al maquetar alta',data:  $r_alta, header: $header,ws:$ws);
         }
@@ -79,13 +82,19 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
         return $r_alta_bd;
     }
 
-    public function maqueta_direccion(array $sucursales){
+    /**
+     * Maqueta las sucursales de una empresa
+     * @param array $sucursales Sucursales asignadas a empresa
+     * @return array
+     */
+    public function maqueta_direccion(array $sucursales): array
+    {
         $registros = array();
         foreach ($sucursales as $sucursal){
             $sucursal['direccion'] = "$sucursal[dp_calle_descripcion] $sucursal[org_sucursal_exterior] ";
             $sucursal['direccion'] .= "$sucursal[org_sucursal_interior] Col. $sucursal[dp_colonia_descripcion]";
             $sucursal['direccion'] .= ", $sucursal[dp_municipio_descripcion]  $sucursal[dp_estado_descripcion] ";
-            $sucursal['direccion'] .= "$sucursal[dp_pais_descripcion]";
+            $sucursal['direccion'] .= " $sucursal[dp_pais_descripcion] ";
             $registros[] = $sucursal;
         }
 

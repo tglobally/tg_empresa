@@ -51,3 +51,55 @@ let fecha_ultimo_cambio_sat = $("#fecha_ultimo_cambio_sat");
 fecha_inicio_operaciones.change(function () {
     fecha_ultimo_cambio_sat.val(fecha_inicio_operaciones.val());
 });
+
+function deepEqual(object1, object2) {
+    const keys1 = Object.keys(object1);
+    const keys2 = Object.keys(object2);
+
+    if (keys1.length !== keys2.length) {
+        return false;
+    }
+    for (const key of keys1) {
+        const val1 = object1[key];
+        const val2 = object2[key];
+        const areObjects = isObject(val1) && isObject(val2);
+        if (
+            areObjects && !deepEqual(val1, val2) ||
+            !areObjects && val1 !== val2
+        ) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function isObject(object) {
+    return object != null && typeof object === 'object';
+}
+
+let elementos = $('.form-control');
+
+let old_values = {};
+let new_values = {};
+
+elementos.each(function () {
+    old_values[ this.id ] = $(this).val();
+});
+
+const button = document.querySelector('.check-estado');
+
+button.addEventListener('click', (event) => {
+
+    let estado = false
+
+    elementos.each(function () {
+        new_values[ this.id ] = $(this).val();
+    });
+
+    if (!deepEqual(old_values, new_values))  {
+        estado = confirm("Hay cambios sin guardar. ¿Desea continuar?");
+        if (!estado) {
+            event.preventDefault();
+        }
+    }
+});
