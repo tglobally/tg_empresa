@@ -35,8 +35,7 @@ class controlador_org_porcentaje_act_economica extends \gamboamartin\organigrama
     public function alta(bool $header, bool $ws = false): array|string
     {
         if(isset($this->registro_id) && $this->registro_id > 0){
-
-            $filtro['org_porcentaje_act_economica.id'] = $this->registro_id;
+            $filtro['org_empresa.id'] = $this->registro_id;
 
             $r_org_porcentaje_act_economica = (new org_porcentaje_act_economica($this->link))->filtro_and(filtro: $filtro);
             if(errores::$error){
@@ -69,12 +68,24 @@ class controlador_org_porcentaje_act_economica extends \gamboamartin\organigrama
         return $r_alta;
     }
 
+    public function alta_bd(bool $header, bool $ws = false): array|stdClass
+    {
+        $registro_id = $this->registro_id;
+
+        $r_alta_bd = parent::alta_bd(header: false, ws: $ws);
+        if(errores::$error){
+            return $this->retorno_error(mensaje: 'Error al maquetar alta',data:  $r_alta_bd, header: $header,ws:$ws);
+        }
+
+        if($r_alta_bd->registro_id > 0) {
+            header('Location: index.php?seccion=org_porcentaje_act_economica&accion=alta&registro_id='.$registro_id.'&session_id='.$this->session_id);
+        }
+        return $r_alta_bd;
+    }
+
     public function maqueta_direccion(array $actividades_economicas){
         $registros = array();
         foreach ($actividades_economicas as $actividad_economica){
-            $actividad_economica['porcentaje'] = "$actividad_economica[porcentaje] $actividad_economica[porcentaje] ";
-            $actividad_economica['porcentaje'] .= "$actividad_economica[porcentaje] Col. $actividad_economica[porcentaje]";
-            $actividad_economica['porcentaje'] .= ", $actividad_economica[porcentaje]";
             $registros[] = $actividad_economica;
         }
 

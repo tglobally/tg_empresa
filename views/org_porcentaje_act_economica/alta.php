@@ -6,7 +6,7 @@
         <h3 class="text-center titulo-form">Hola, <?php echo $controlador->datos_session_usuario['adm_usuario_user']; ?> </h3>
 
         <div class="  form-main" id="form">
-            <form method="post" action="./index.php?seccion=org_porcentaje_act_economica&accion=alta_bd&session_id=<?php echo $controlador->session_id; ?>" class="form-additional">
+            <form method="post" action="./index.php?seccion=org_porcentaje_act_economica&accion=alta_bd&session_id=<?php echo $controlador->session_id; ?>&registro_id=<?php echo $controlador->registro_id; ?>" class="form-additional">
                 <?php echo $controlador->inputs->select->org_empresa_id; ?>
                 <?php echo $controlador->inputs->select->cat_sat_actividad_economica_id; ?>
                 <?php echo $controlador->inputs->porcentaje; ?>
@@ -26,9 +26,8 @@
                         <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Codigo</th>
+                            <th scope="col">RFC Empresa</th>
                             <th scope="col">Empresa</th>
-                            <th scope="col">Actividad Economica</th>
                             <th scope="col">Porcentaje</th>
                         </tr>
                         </thead>
@@ -36,13 +35,10 @@
                         <?php
                         foreach ($controlador->actividades_economicas as $registro){
                             echo "<tr>";
-                            echo "<td>$registro[org_sucursal_id]</td>";
-                            echo "<td>$registro[org_sucursal_codigo]</td>";
-                            echo "<td>$registro[org_sucursal_fecha_inicio_operaciones]</td>";
-                            echo "<td>$registro[direccion]</td>";
-                            echo "<td>$registro[org_sucursal_telefono_1]</td>";
-                            echo "<td>$registro[org_sucursal_telefono_2]</td>";
-                            echo "<td>$registro[org_sucursal_telefono_3]</td>";
+                            echo "<td>$registro[org_porcentaje_act_economica_id]</td>";
+                            echo "<td>$registro[org_empresa_rfc]</td>";
+                            echo "<td>$registro[org_empresa_razon_social]</td>";
+                            echo "<td>$registro[org_porcentaje_act_economica_porcentaje]</td>";
                             echo "</tr>";
                         } ?>
                         </tbody>
