@@ -7,8 +7,6 @@
 
         <div class="  form-main" id="form">
             <form method="post" action="./index.php?seccion=org_porcentaje_act_economica&accion=alta_bd&session_id=<?php echo $controlador->session_id; ?>" class="form-additional">
-                <?php echo $controlador->inputs->codigo; ?>
-                <?php echo $controlador->inputs->codigo_bis; ?>
                 <?php echo $controlador->inputs->select->org_empresa_id; ?>
                 <?php echo $controlador->inputs->select->cat_sat_actividad_economica_id; ?>
                 <?php echo $controlador->inputs->porcentaje; ?>
