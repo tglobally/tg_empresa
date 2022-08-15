@@ -2,6 +2,20 @@ $( document ).ready(function() {
     $(".info").fadeTo(7500, 500).slideUp(500, function(){
         $(".info").slideUp(500);
     });
+
+    let titulo0 = "Empresas"
+    let titulo1 = "Lista"
+    let titulo2 = "Empresas"
+    let titulo3 = "Empresas"
+    let titulo4 = "Empresas"
+
+    let objetivo0 = document.getElementById('Home-text-0');
+    objetivo0.innerHTML = titulo0;
+    let objetivo1 = document.getElementById('Home-text-1');
+    objetivo1.innerHTML = titulo1;
+
+
+
 });
 
 
