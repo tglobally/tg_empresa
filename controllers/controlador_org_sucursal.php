@@ -59,7 +59,7 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
             $this->razon_social = $registro['org_empresa_razon_social'];
         }
 
-
+        $this->registro_id = $_GET['org_empresa_id'];
         $r_alta = parent::alta($header, $ws, true);
         if(errores::$error){
             return $this->retorno_error(mensaje: 'Error al maquetar alta',data:  $r_alta, header: $header,ws:$ws);
