@@ -46,6 +46,7 @@ $url_icons = (new views())->url_icons;
                 <tbody>
                 <?php foreach ($controlador->registros as $registro){
 
+
                     ?>
                 <tr>
                     <th class="colum_accion" scope="row">

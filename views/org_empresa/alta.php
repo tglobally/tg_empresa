@@ -15,7 +15,7 @@
                 <?php echo $controlador->inputs->nombre_comercial; ?>
                 <div class="buttons col-md-12">
                     <?php echo $controlador->btns['guarda']; ?>
-                    <?php echo $controlador->btns['siguiente']; ?>
+                    <?php echo $controlador->btns['siguiente_ubicacion']; ?>
                 </div>
             </form>
         </div>
