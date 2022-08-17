@@ -1,4 +1,4 @@
-<?php /** @var controllers\controlador_org_empresa $controlador */ ?>
+<?php /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */ ?>
 <?php include 'templates/org_empresa/alta/secciones.php'; ?>
 <div class="col-md-9 formulario">
     <div class="col-lg-12">
@@ -15,10 +15,10 @@
                 <?php echo $controlador->inputs->nombre_comercial; ?>
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="modifica">Guarda</button>
+                        <?php echo $controlador->btns['guarda']; ?>
                     </div>
                     <div class="col-md-6 btn-ancho">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="ubicacion">Siguiente</button>
+                        <?php echo $controlador->btns['siguiente']; ?>
                     </div>
 
                 </div>

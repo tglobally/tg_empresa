@@ -8,8 +8,6 @@
  */
 namespace tglobally\tg_empresa\controllers;
 use gamboamartin\errores\errores;
-use gamboamartin\system\init;
-use JsonException;
 use PDO;
 use stdClass;
 use tglobally\template_tg\html;
