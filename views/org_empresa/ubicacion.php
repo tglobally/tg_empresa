@@ -23,10 +23,10 @@
                         <a href="<?php echo $controlador->link_modifica; ?>" role="button" class="btn btn-info btn-guarda check-estado col-md-12 " >Generales</a>
                     </div>
                     <div class="col-md-4">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Guarda</button>
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next"  value="ubicacion">Modifica</button>
                     </div>
                     <div class="col-md-4">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Siguiente</button>
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next"  value="cif">Siguiente</button>
                     </div>
                     
                 </div>
