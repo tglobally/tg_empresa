@@ -30,11 +30,14 @@
 
 
                 <div class="buttons col-md-12">
-                    <div class="col-md-6 btn-ancho">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Guarda</button>
+                    <div class="col-md-4 btn-ancho">
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12" name="btn_action_next" value="identidad" >Identidad</button>
                     </div>
-                    <div class="col-md-6 btn-ancho">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " >Siguiente</button>
+                    <div class="col-md-4 btn-ancho">
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12" name="btn_action_next" value="sucursales" >Guarda</button>
+                    </div>
+                    <div class="col-md-4 btn-ancho">
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12" name="btn_action_next"  value="actividad_economina">Siguiente</button>
                     </div>
 
                 </div>
