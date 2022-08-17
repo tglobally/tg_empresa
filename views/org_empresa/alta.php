@@ -14,13 +14,8 @@
                 <?php echo $controlador->inputs->razon_social; ?>
                 <?php echo $controlador->inputs->nombre_comercial; ?>
                 <div class="buttons col-md-12">
-                    <div class="col-md-6">
-                        <?php echo $controlador->btns['guarda']; ?>
-                    </div>
-                    <div class="col-md-6 btn-ancho">
-                        <?php echo $controlador->btns['siguiente']; ?>
-                    </div>
-
+                    <?php echo $controlador->btns['guarda']; ?>
+                    <?php echo $controlador->btns['siguiente']; ?>
                 </div>
             </form>
         </div>
