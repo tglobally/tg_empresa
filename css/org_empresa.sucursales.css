@@ -2,11 +2,6 @@
 @import "fonts.css";
 
 
-.cont_tabla_sucursal{
-    margin-top: 20px;
-}
-
-
 
 .footable.table th, .footable-details.table th {
     font-family: Helvetica;

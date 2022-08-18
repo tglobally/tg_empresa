@@ -6,6 +6,8 @@
 }
 .btn-info {
     border-radius: 4px;
+    background-color: #000098;
+    border-color: #000098;
 }
 .btn-warning {
     border-radius: 4px;
