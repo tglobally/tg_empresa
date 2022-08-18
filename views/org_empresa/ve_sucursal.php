@@ -29,9 +29,18 @@
             <?php echo $controlador->inputs->org_sucursal_telefono_1; ?>
             <?php echo $controlador->inputs->org_sucursal_telefono_2; ?>
             <?php echo $controlador->inputs->org_sucursal_telefono_3; ?>
+
+            <div class="buttons col-md-12">
+                <div class="col-md-12 btn-ancho">
+                <?php echo $controlador->btns['link_sucursales']; ?>
+                </div>
+            </div>
+
         </div>
+
     </div>
-    
+
+
 </div>
 
 
