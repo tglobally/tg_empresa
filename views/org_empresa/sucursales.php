@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="cont_tabla_sucursal  col-md-12">
-                    <table class="table table-dark footable footable-filtering footable-filtering-right ">
+                    <table class="table  footable-sort">
                         <thead>
                         <tr>
                             <th data-breakpoints="xs sm md" data-type="html" >Id</th>
@@ -51,7 +51,7 @@
                             <th data-breakpoints="xs sm md" data-type="html" >Tipo</th>
                             <th data-breakpoints="xs sm md" data-type="html" >Descripcion</th>
                             <th data-breakpoints="xs sm md" data-type="html" >Fecha Inicio</th>
-                            <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Calle</th>
+                            <th data-breakpoints="xs sm md" data-type="html" >Calle</th>
                             <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Ext</th>
                             <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Int</th>
                             <th data-breakpoints="xs sm md" data-type="html" >CP</th>
