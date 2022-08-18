@@ -32,7 +32,12 @@ use config\views; ?>
                     <?php echo $controlador->inputs->org_sucursal_telefono_2; ?>
                     <?php echo $controlador->inputs->org_sucursal_telefono_3; ?>
                     <?php if($controlador->muestra_btn_upd){ ?>
-                        <?php include (new views())->ruta_templates.'botons/submit/modifica_bd.php';?>
+                        <div class="col-md-6 btn-ancho">
+                            <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="modifica_sucursal">Modifica</button>
+                        </div>
+                        <div class="col-md-6 btn-ancho">
+                            <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="sucursales">Sucursales</button>
+                        </div>
                     <?php } ?>
                 </div>
             </form>
