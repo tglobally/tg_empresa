@@ -14,3 +14,6 @@
     border-radius: 4px;
 }
 
+.table .table-dark th{
+    background-color: #0B0595;
+}

@@ -42,26 +42,26 @@
 
                 </div>
 
-                <div class="cont_tabla_sucursal col-md-12">
-                    <table class="table table-dark">
+                <div class="cont_tabla_sucursal  col-md-12">
+                    <table class="table table-dark footable footable-filtering footable-filtering-right ">
                         <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Codigo</th>
-                            <th>Tipo</th>
-                            <th>Descripcion</th>
-                            <th>Fecha Inicio</th>
-                            <th>Calle</th>
-                            <th>Ext</th>
-                            <th>Int</th>
-                            <th>CP</th>
-                            <th>Mun</th>
-                            <th>Edo</th>
-                            <th>Tel</th>
-                            <th>Serie</th>
-                            <th>Ver</th>
-                            <th>Modifica</th>
-                            <th>Elimina</th>
+                            <th data-breakpoints="xs sm md" data-type="html" >Id</th>
+                            <th data-breakpoints="xs sm md" data-type="html" >Codigo</th>
+                            <th data-breakpoints="xs sm md" data-type="html" >Tipo</th>
+                            <th data-breakpoints="xs sm md" data-type="html" >Descripcion</th>
+                            <th data-breakpoints="xs sm md" data-type="html" >Fecha Inicio</th>
+                            <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Calle</th>
+                            <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Ext</th>
+                            <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Int</th>
+                            <th data-breakpoints="xs sm md" data-type="html" >CP</th>
+                            <th data-breakpoints="xs sm md" data-type="html" >Mun</th>
+                            <th data-breakpoints="xs sm md" data-type="html" >Edo</th>
+                            <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Tel</th>
+                            <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Serie</th>
+                            <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Ver</th>
+                            <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Modifica</th>
+                            <th data-breakpoints="xs sm md" data-type="html" data-filterable="false">Elimina</th>
                         </tr>
                         </thead>
                         <tbody>
