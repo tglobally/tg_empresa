@@ -14,8 +14,8 @@
                 <?php echo $controlador->inputs->razon_social; ?>
                 <?php echo $controlador->inputs->nombre_comercial; ?>
                 <div class="buttons col-md-12">
-                    <?php echo $controlador->btns['guarda']; ?>
-                    <?php echo $controlador->btns['siguiente_ubicacion']; ?>
+                    <?php echo $controlador->btns['sub_guarda']; ?>
+                    <?php echo $controlador->btns['sub_siguiente_ubicacion']; ?>
                 </div>
             </form>
         </div>
