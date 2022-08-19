@@ -1,10 +1,8 @@
 <?php
+/** @var string $url_template */
 use config\generales;
-use config\views;
-
+include 'url_template.php';
 $path_base = (new generales())->path_base;
-$url_template = (new views())->url_assets;
-$url_template .= 'css/';
 include $path_base.'css/base.php';
 ?>
 <style>
