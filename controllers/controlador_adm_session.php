@@ -11,6 +11,8 @@ namespace tglobally\tg_empresa\controllers;
 use config\generales;
 use gamboamartin\errores\errores;
 use JsonException;
+use models\adm_accion;
+use models\adm_usuario;
 use stdClass;
 
 class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_session {

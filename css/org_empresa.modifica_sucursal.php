@@ -1,7 +1,13 @@
-@import "base.css";
-@import "fonts.css";
+<?php
+use config\generales;
+$url_base = (new generales())->url_base;
+?>
+<style>
+    @import "<?php echo $url_base; ?>css/base.css";
+    @import "<?php echo $url_base; ?>css/fonts.css";
+</style>
 
-
+<style>
 
 .footable.table th, .footable-details.table th {
     font-family: Helvetica;
@@ -13,3 +19,4 @@
     background-color: #0B0595;
     border: 1px solid #0B0595
 }
+</style>
