@@ -3,8 +3,6 @@
 use config\views;
 $url_assets = (new views())->url_assets;
 
-$i = 1;
-
 ?>
 
 <div class="col-md-3 secciones">
@@ -17,6 +15,7 @@ $i = 1;
             <h3>Alta de empresas</h3>
 
             <?php
+            $i = 1;
             while($i<=$controlador->total_items_sections){ ?>
                 <hr class="hr-menu-lateral">
                 <?php
