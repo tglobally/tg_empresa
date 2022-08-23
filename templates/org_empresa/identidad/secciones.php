@@ -3,7 +3,6 @@
 use config\views;
 $url_assets = (new views())->url_assets;
 
-$total_items = 7;
 $i = 1;
 ?>
 <div class="col-md-3 secciones">
@@ -22,7 +21,7 @@ $i = 1;
             <h3>Empresas</h3>
 
             <?php
-            while($i<=$total_items){ ?>
+            while($i<=$controlador->total_items_sections){ ?>
                 <hr class="hr-menu-lateral">
                 <?php
                 $color = 'gris';
