@@ -16,17 +16,23 @@ $section = 'org_empresa';
             <?php $number = '1.azul'; ?>
             <?php include "templates/$section/_base/buttons/number.azul.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/$section/_base/buttons/2.gris.php"; ?>
+            <?php $number = '2.gris'; ?>
+            <?php include "templates/$section/_base/buttons/number.gris.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/$section/_base/buttons/3.gris.php"; ?>
+            <?php $number = '3.gris'; ?>
+            <?php include "templates/$section/_base/buttons/number.gris.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/$section/_base/buttons/4.gris.php"; ?>
+            <?php $number = '4.gris'; ?>
+            <?php include "templates/$section/_base/buttons/number.gris.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/$section/_base/buttons/5.gris.php"; ?>
+            <?php $number = '5.gris'; ?>
+            <?php include "templates/$section/_base/buttons/number.gris.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/$section/_base/buttons/6.gris.php"; ?>
+            <?php $number = '6.gris'; ?>
+            <?php include "templates/$section/_base/buttons/number.gris.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/$section/_base/buttons/7.gris.php"; ?>
+            <?php $number = '7.gris'; ?>
+            <?php include "templates/$section/_base/buttons/number.gris.php"; ?>
         </div>
 
     </div>

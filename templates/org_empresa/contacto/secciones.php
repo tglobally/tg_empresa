@@ -1,7 +1,8 @@
 <?php
 /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */
 use config\views;
-$url_assets = (new views())->url_assets; ?>
+$url_assets = (new views())->url_assets;
+$section = 'org_empresa'; ?>
 <div class="col-md-3 secciones">
 
     <div class="col-md-12 int_secciones ">
@@ -16,20 +17,26 @@ $url_assets = (new views())->url_assets; ?>
         </div>
         <div class="col-md-8">
             <h3>Empresas</h3>
-            <?php include "templates/org_empresa/_base/links/1.php"; ?>
+            <?php $number = '1.gris'; ?>
+            <?php include "templates/$section/_base/links/1.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/2.php"; ?>
+            <?php $number = '2.gris'; ?>
+            <?php include "templates/$section/_base/links/2.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/3.php"; ?>
+            <?php $number = '3.gris'; ?>
+            <?php include "templates/$section/_base/links/3.php"; ?>
             <hr class="hr-menu-lateral">
             <?php $number = '4.azul'; ?>
             <?php include "templates/org_empresa/_base/buttons/number.azul.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/5.php"; ?>
+            <?php $number = '5.gris'; ?>
+            <?php include "templates/$section/_base/links/5.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/6.php"; ?>
+            <?php $number = '6.gris'; ?>
+            <?php include "templates/$section/_base/links/6.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/7.php"; ?>
+            <?php $number = '7.gris'; ?>
+            <?php include "templates/$section/_base/links/7.php"; ?>
         </div>
     </div>
 </div>

@@ -22,16 +22,22 @@ $section = 'org_empresa';
             <?php $number = '1.azul'; ?>
             <?php include "templates/$section/_base/buttons/number.azul.php"; ?>
             <hr class="hr-menu-lateral">
+            <?php $number = '2.gris'; ?>
             <?php include "templates/$section/_base/links/2.php"; ?>
             <hr class="hr-menu-lateral">
+            <?php $number = '3.gris'; ?>
             <?php include "templates/$section/_base/links/3.php"; ?>
             <hr class="hr-menu-lateral">
+            <?php $number = '4.gris'; ?>
             <?php include "templates/$section/_base/links/4.php"; ?>
             <hr class="hr-menu-lateral">
+            <?php $number = '5.gris'; ?>
             <?php include "templates/$section/_base/links/5.php"; ?>
             <hr class="hr-menu-lateral">
+            <?php $number = '6.gris'; ?>
             <?php include "templates/$section/_base/links/6.php"; ?>
             <hr class="hr-menu-lateral">
+            <?php $number = '7.gris'; ?>
             <?php include "templates/$section/_base/links/7.php"; ?>
         </div>
 
