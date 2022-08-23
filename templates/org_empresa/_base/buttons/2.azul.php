@@ -1,3 +1,4 @@
+<?php $number = '2.azul'; ?>
 <button class="btn btn-default menu-lateral menu-lateral-active">
-    <?php include "templates/org_empresa/_base/buttons/_2.azul.php"; ?>
+    <?php include "templates/org_empresa/_base/buttons/_$number.php"; ?>
 </button>
