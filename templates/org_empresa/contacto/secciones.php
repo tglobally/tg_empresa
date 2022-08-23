@@ -3,7 +3,6 @@
 use config\views;
 $url_assets = (new views())->url_assets;
 
-$number_active = 4;
 $total_items = 7;
 $i = 1;
 ?>
@@ -26,7 +25,7 @@ $i = 1;
                 <hr class="hr-menu-lateral">
                 <?php
                 $color = 'gris';
-                if($i===$number_active){
+                if($i===$controlador->number_active){
                     $color = 'azul';
                 }
                 $number = "$i.$color";
