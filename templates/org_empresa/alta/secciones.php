@@ -1,4 +1,5 @@
 <?php
+/** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */
 use config\views;
 $url_assets = (new views())->url_assets;
 $section = 'org_empresa';
@@ -28,10 +29,10 @@ $i = 1;
                 }
                 $number = "$i.$color";
                 if($color === 'azul') {
-                    include "templates/$section/_base/buttons/number.$color.php";
+                    include "templates/$controlador->seccion/_base/buttons/number.$color.php";
                 }
                 else{
-                    include "templates/$section/_base/links/$i.php";
+                    include "templates/$controlador->seccion/_base/links/$i.php";
                 }
                 $i++;
 
