@@ -22,7 +22,8 @@ $url_assets = (new views())->url_assets; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/org_empresa/_base/links/3.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/buttons/4.azul.php"; ?>
+            <?php $number = '4.azul'; ?>
+            <?php include "templates/org_empresa/_base/buttons/number.azul.php"; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/org_empresa/_base/links/5.php"; ?>
             <hr class="hr-menu-lateral">

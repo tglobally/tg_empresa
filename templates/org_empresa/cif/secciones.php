@@ -1,7 +1,10 @@
 <?php
 /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */
 use config\views;
-$url_assets = (new views())->url_assets; ?>
+$url_assets = (new views())->url_assets;
+
+?>
+
 <div class="col-md-3 secciones">
 
     <div class="col-md-12 int_secciones ">
@@ -20,7 +23,8 @@ $url_assets = (new views())->url_assets; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/org_empresa/_base/links/2.php"; ?>
             <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/buttons/3.azul.php"; ?>
+            <?php $number = '3.azul'; ?>
+            <?php include "templates/org_empresa/_base/buttons/number.azul.php"; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/org_empresa/_base/links/4.php"; ?>
             <hr class="hr-menu-lateral">

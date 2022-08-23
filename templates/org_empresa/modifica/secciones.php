@@ -3,6 +3,7 @@
 use config\views;
 $url_assets = (new views())->url_assets;
 $section = 'org_empresa';
+
 ?>
 <div class="col-md-3 secciones">
 
@@ -18,7 +19,8 @@ $section = 'org_empresa';
         </div>
         <div class="col-md-8">
             <h3>Empresas</h3>
-            <?php include "templates/$section/_base/buttons/1.azul.php"; ?>
+            <?php $number = '1.azul'; ?>
+            <?php include "templates/$section/_base/buttons/number.azul.php"; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/$section/_base/links/2.php"; ?>
             <hr class="hr-menu-lateral">
