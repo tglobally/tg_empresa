@@ -2,7 +2,7 @@
 /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */
 use config\views;
 $url_assets = (new views())->url_assets;
-$section = 'org_empresa';
+
 $number_active = 3;
 $total_items = 7;
 $i = 1;
