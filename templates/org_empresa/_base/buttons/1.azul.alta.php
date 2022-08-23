@@ -1,4 +1,5 @@
-<?php $number = '1.azul'; ?>
+<?php $number = '1.azul.alta'; ?>
+<?php $section = 'org_empresa'; ?>
 <button class="btn btn-default menu-lateral menu-lateral-active">
-    <?php include "templates/org_empresa/_base/buttons/_$number.alta.php"; ?>
+    <?php include "templates/$section/_base/buttons/_$number.php"; ?>
 </button>
