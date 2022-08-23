@@ -1,8 +1,9 @@
 <?php
 /** @var string $url_template */
-use config\generales;
-$path_base = (new generales())->path_base;
-include $path_base.'css/_base_css.php';
+use config\views;
+
+$ruta_template_base = (new views())->ruta_template_base;
+include $ruta_template_base.'assets/css/_base_css.php';
 ?>
 <style>
     @import "<?php echo $url_template; ?>fonts.css";
