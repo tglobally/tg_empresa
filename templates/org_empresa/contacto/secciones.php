@@ -2,7 +2,11 @@
 /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */
 use config\views;
 $url_assets = (new views())->url_assets;
-$section = 'org_empresa'; ?>
+$section = 'org_empresa';
+$number_active = 4;
+$total_items = 7;
+$i = 1;
+?>
 <div class="col-md-3 secciones">
 
     <div class="col-md-12 int_secciones ">
@@ -17,26 +21,25 @@ $section = 'org_empresa'; ?>
         </div>
         <div class="col-md-8">
             <h3>Empresas</h3>
-            <?php $number = '1.gris'; ?>
-            <?php include "templates/$section/_base/links/1.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php $number = '2.gris'; ?>
-            <?php include "templates/$section/_base/links/2.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php $number = '3.gris'; ?>
-            <?php include "templates/$section/_base/links/3.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php $number = '4.azul'; ?>
-            <?php include "templates/org_empresa/_base/buttons/number.azul.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php $number = '5.gris'; ?>
-            <?php include "templates/$section/_base/links/5.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php $number = '6.gris'; ?>
-            <?php include "templates/$section/_base/links/6.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php $number = '7.gris'; ?>
-            <?php include "templates/$section/_base/links/7.php"; ?>
+            <?php
+            while($i<=$total_items){ ?>
+                <hr class="hr-menu-lateral">
+                <?php
+                $color = 'gris';
+                if($i===$number_active){
+                    $color = 'azul';
+                }
+                $number = "$i.$color";
+                if($color === 'azul') {
+                    include "templates/$section/_base/buttons/number.$color.php";
+                }
+                else{
+                    include "templates/$section/_base/links/$i.php";
+                }
+                $i++;
+
+            }
+            ?>
         </div>
     </div>
 </div>

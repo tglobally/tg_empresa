@@ -2,7 +2,9 @@
 /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */
 use config\views;
 $url_assets = (new views())->url_assets;
-$number = '7.azul';
+$number_active = 7;
+$total_items = 7;
+$i = 1;
 ?>
 <div class="col-md-3 secciones">
 
@@ -18,19 +20,25 @@ $number = '7.azul';
         </div>
         <div class="col-md-8">
             <h3>Empresas</h3>
-            <?php include "templates/org_empresa/_base/links/1.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/2.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/3.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/4.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/5.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/links/6.php"; ?>
-            <hr class="hr-menu-lateral">
-            <?php include "templates/org_empresa/_base/buttons/number.azul.php"; ?>
+            <?php
+            while($i<=$total_items){ ?>
+                <hr class="hr-menu-lateral">
+                <?php
+                $color = 'gris';
+                if($i===$number_active){
+                    $color = 'azul';
+                }
+                $number = "$i.$color";
+                if($color === 'azul') {
+                    include "templates/$section/_base/buttons/number.$color.php";
+                }
+                else{
+                    include "templates/$section/_base/links/$i.php";
+                }
+                $i++;
+
+            }
+            ?>
         </div>
 
     </div>
