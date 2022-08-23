@@ -13,11 +13,14 @@ use tglobally\template_tg\html;
 
 class controlador_org_empresa extends \gamboamartin\organigrama\controllers\controlador_org_empresa {
 
+    public string $include_menu_secciones = '';
     public function __construct(PDO $link, stdClass $paths_conf = new stdClass()){
 
         $html_base = new html();
         parent::__construct( link: $link, html: $html_base);
         $this->titulo_lista = 'Empresas';
+
+        $this->include_menu_secciones = "templates/$this->tabla/$this->accion/secciones.php";
 
 
     }

@@ -1,7 +1,5 @@
-<?php /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */
-
-use config\views; ?>
-<?php include 'templates/org_sucursal/alta/secciones.php'; ?>
+<?php /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */?>
+<?php include $controlador->include_menu_secciones; ?>
 
 <div class="col-md-9 formulario">
     <div class="col-lg-12">

@@ -1,4 +1,4 @@
-<?php /** @var controllers\controlador_org_empresa $controlador */ ?>
+<?php /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */ ?>
 <?php
 
 use config\views;
