@@ -56,7 +56,7 @@
         "gamboa.martin/cat_sat": "dev-main",
         "gamboa.martin/organigrama": "dev-main",
         "gamboa.martin/direccion_postal": "dev-main",
-        "tglobally/template_tg": "dev-main",
+        "tglobally/template_tg": "^1.0.0",
         "gamboa.martin/template_1": "dev-main",
         "gamboa.martin/js_base": "dev-master"
     },
