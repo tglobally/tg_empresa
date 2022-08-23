@@ -1,4 +1,6 @@
-<?php /** @var controllers\controlador_org_empresa $controlador */ ?>
+<?php /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */ ?>
+<?php $number = '1.azul.alta'; ?>
+<?php $section = 'org_empresa'; ?>
 <a href="index.php?seccion=org_empresa&accion=alta&session_id=<?php echo $controlador->session_id; ?>">
-    <?php include "templates/org_empresa/_base/buttons/1.azul.alta.php"; ?>
+    <?php include "templates/$section/_base/buttons/$number.php"; ?>
 </a>
