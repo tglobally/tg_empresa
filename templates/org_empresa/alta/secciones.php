@@ -29,7 +29,11 @@ $url_assets = (new views())->url_assets;
                     return (new errores())->error(mensaje: 'Error al obtener color', data: $color);
                 }
 
-                $number = "$i.$color";
+                $number = (new base())->number(i:$i,color: $color);
+                if(gamboamartin\errores\errores::$error){
+                    return (new errores())->error(mensaje: 'Error al obtener number', data: $color);
+                }
+
                 if($color === 'azul') {
                     include "templates/$controlador->seccion/_base/buttons/number.$color.php";
                 }

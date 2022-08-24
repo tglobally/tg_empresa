@@ -9,4 +9,9 @@ class base{
         }
         return $color;
     }
+
+    public function number(int $i, string $color): string
+    {
+        return "$i.$color";
+    }
 }
