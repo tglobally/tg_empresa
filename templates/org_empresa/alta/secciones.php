@@ -12,9 +12,12 @@ $url_assets = (new views())->url_assets;
 <div class="col-md-3 secciones">
 
     <div class="col-md-12 int_secciones ">
-        <div class="col-md-4 seccion">
-            <img src="<?php echo $url_assets."img/numeros/$controlador->number_active.svg"; ?>" class="img-seccion">
-        </div>
+        <?php
+        echo (new base())->number_head(number_active: $controlador->number_active);
+        if(gamboamartin\errores\errores::$error){
+            return (new errores())->error(mensaje: 'Error al integrar include', data: '');
+        }
+        ?>
         <?php
         $data_template = (new base())->contenido_menu_lateral(aplica_link:false,controlador:$controlador, titulo: 'Empresas');
         if(gamboamartin\errores\errores::$error){

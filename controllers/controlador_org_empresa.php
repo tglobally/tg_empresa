@@ -21,7 +21,6 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
         $this->titulo_lista = 'Empresas';
 
 
-
     }
 
 

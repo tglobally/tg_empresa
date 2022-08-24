@@ -1,6 +1,7 @@
 <?php
 namespace templates;
 use config\generales;
+use config\views;
 use gamboamartin\errores\errores;
 use gamboamartin\system\system;
 use stdClass;
@@ -117,5 +118,14 @@ class base{
     private function number( string $color, int $i): string
     {
         return "$i.$color";
+    }
+
+    public function number_head(int $number_active): string
+    {
+        $url_assets = (new views())->url_assets;
+
+        $ruta = $url_assets."img/numeros/$number_active.svg";
+
+        return "<div class='col-md-4 seccion'><img src='$ruta' class='img-seccion'></div>";
     }
 }
