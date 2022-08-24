@@ -17,9 +17,7 @@ $url_assets = (new views())->url_assets;
             <h4 class="sub_text_datos">Razón social:</h4>
             <h5 class="text_datos"><?php echo $controlador->razon_social;?></h5>
         </div>
-        <div class="col-md-4 seccion">
-            <img src="<?php echo $url_assets."img/numeros/$controlador->number_active.svg"; ?>" class="img-seccion">
-        </div>
+        <?php echo $controlador->menu_lateral; ?>
         <?php
         $data_template = (new menu_lateral())->contenido_menu_lateral(aplica_link:true,controlador:$controlador, titulo: 'Empresas');
         if(gamboamartin\errores\errores::$error){

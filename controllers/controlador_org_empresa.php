@@ -7,9 +7,11 @@
  *
  */
 namespace tglobally\tg_empresa\controllers;
+use gamboamartin\errores\errores;
 use PDO;
 use stdClass;
 use tglobally\template_tg\html;
+use tglobally\template_tg\menu_lateral;
 
 class controlador_org_empresa extends \gamboamartin\organigrama\controllers\controlador_org_empresa {
 
@@ -20,6 +22,13 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
         parent::__construct( link: $link, html: $html_base);
         $this->titulo_lista = 'Empresas';
 
+        $menu_lateral = (new menu_lateral())->number_head(number_active: $this->number_active);
+        if(errores::$error){
+            $error = $this->errores->error(mensaje: 'Error al integrar include', data: '');
+            print_r($error);
+            exit;
+        }
+        $this->menu_lateral = $menu_lateral;
 
     }
 
