@@ -1,5 +1,6 @@
 <?php
 namespace templates;
+use config\generales;
 use gamboamartin\errores\errores;
 use stdClass;
 
@@ -31,6 +32,20 @@ class base{
         return $data;
     }
 
+    public function include_item(int $i, int $number_active, int $registro_id, string $seccion): array|stdClass
+    {
+        $data_template = $this->init_data_template(i:$i,number_active: $number_active,seccion:  $seccion);
+        if(errores::$error){
+            return (new errores())->error(mensaje: 'Error al obtener datos', data: $data_template);
+        }
+
+        $session_id = (new generales())->session_id;
+
+        $number = $data_template->number;
+
+        include $data_template->include;
+        return $data_template;
+    }
 
 
     private function include_number(string $color, int $i, string $seccion): string
@@ -46,7 +61,7 @@ class base{
         return $include;
     }
 
-    public function init_data_template(int $i, int $number_active, string $seccion): array|stdClass
+    private function init_data_template(int $i, int $number_active, string $seccion): array|stdClass
     {
         $data_template = $this->data_template_section(i:$i,number_active:  $number_active);
         if(errores::$error){

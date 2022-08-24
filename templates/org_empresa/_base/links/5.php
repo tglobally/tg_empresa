@@ -1,5 +1,7 @@
-<?php /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */ ?>
+<?php /** @var string $seccion */ ?>
+<?php /** @var int $registro_id */ ?>
+<?php /** @var string $session_id */ ?>
 
-<a href="index.php?seccion=org_empresa&accion=identidad&registro_id=<?php echo $controlador->registro_id; ?>&session_id=<?php echo $controlador->session_id; ?>">
-    <?php include "templates/$controlador->seccion/_base/buttons/number.gris.php"; ?>
+<a href="index.php?seccion=org_empresa&accion=identidad&registro_id=<?php echo $registro_id; ?>&session_id=<?php echo $session_id; ?>">
+    <?php include "templates/$seccion/_base/buttons/number.gris.php"; ?>
 </a>

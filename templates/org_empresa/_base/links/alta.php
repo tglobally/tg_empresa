@@ -1,4 +1,5 @@
-<?php /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */ ?>
-<a href="index.php?seccion=org_empresa&accion=alta&session_id=<?php echo $controlador->session_id; ?>">
-    <?php include "templates/$controlador->seccion/_base/buttons/number.gris.php"; ?>
+<?php /** @var string $seccion */ ?>
+<?php /** @var string $session_id */ ?>
+<a href="index.php?seccion=org_empresa&accion=alta&session_id=<?php echo $session_id; ?>">
+    <?php include "templates/$seccion/_base/buttons/number.gris.php"; ?>
 </a>

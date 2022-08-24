@@ -26,15 +26,13 @@ $url_assets = (new views())->url_assets;
             while($i<=$controlador->total_items_sections){ ?>
                 <hr class="hr-menu-lateral">
                 <?php
-                $data_template = (new base())->init_data_template(i:$i,number_active:
-                    $controlador->number_active,seccion:  $controlador->seccion);
+
+                $data_template = (new base())->include_item(i:$i,number_active:  $controlador->number_active,
+                    registro_id: $controlador->registro_id,seccion:  $controlador->seccion);
                 if(gamboamartin\errores\errores::$error){
-                    return (new errores())->error(mensaje: 'Error al obtener datos', data: $data_template);
+                    return (new errores())->error(mensaje: 'Error al integrar include', data: $data_template);
                 }
 
-                $number = $data_template->number;
-
-                include $data_template->include;
                 $i++;
 
             }
