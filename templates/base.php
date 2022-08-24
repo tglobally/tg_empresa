@@ -47,6 +47,24 @@ class base{
         return $data_template;
     }
 
+    public function include_items(int $number_active, int $registro_id, string $seccion, int $total_items_sections): array
+    {
+        $i = 1;
+        $data_html = array();
+        while($i<=$total_items_sections){ ?>
+            <hr class="hr-menu-lateral">
+            <?php
+            $data_template = $this->include_item(i:$i,number_active:  $number_active,
+                registro_id: $registro_id,seccion:  $seccion);
+            if(errores::$error){
+                return (new errores())->error(mensaje: 'Error al integrar include', data: $data_template);
+            }
+            $data_html[] = $data_template;
+            $i++;
+        }
+        return $data_html;
+    }
+
 
     private function include_number(string $color, int $i, string $seccion): string
     {
