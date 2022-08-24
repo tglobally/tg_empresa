@@ -20,7 +20,7 @@ $url_assets = (new views())->url_assets;
             <img src="<?php echo $url_assets."img/numeros/$controlador->number_active.svg"; ?>" class="img-seccion">
         </div>
         <?php
-        $data_template = (new base())->contenido_menu_lateral(controlador:$controlador, titulo: 'Empresas');
+        $data_template = (new base())->contenido_menu_lateral(aplica_link:true,controlador:$controlador, titulo: 'Empresas');
         if(gamboamartin\errores\errores::$error){
             return (new errores())->error(mensaje: 'Error al integrar include', data: $data_template);
         }

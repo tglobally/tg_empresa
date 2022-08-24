@@ -15,11 +15,11 @@ class base{
         return $color;
     }
 
-    public function contenido_menu_lateral(system $controlador,string $titulo): array
+    public function contenido_menu_lateral(bool $aplica_link, system $controlador,string $titulo): array
     {
         echo "<div class='col-md-8'>";
         echo "<h3>$titulo</h3>";
-        $data_template = $this->include_items(number_active: $controlador->number_active,
+        $data_template = $this->include_items(aplica_link:$aplica_link, number_active: $controlador->number_active,
             registro_id:  $controlador->registro_id, seccion: $controlador->seccion,
             total_items_sections: $controlador->total_items_sections);
         if(errores::$error){
@@ -48,14 +48,13 @@ class base{
         return $data;
     }
 
-    private function include_item(int $i, int $number_active, int $registro_id, string $seccion): array|stdClass
+    private function include_item(bool $aplica_link, int $i, int $number_active, int $registro_id, string $seccion): array|stdClass
     {
         $session_id = (new generales())->session_id;
-        $data_template = $this->init_data_template(i:$i,number_active: $number_active,seccion:  $seccion);
+        $data_template = $this->init_data_template(aplica_link:$aplica_link,i:$i,number_active: $number_active,seccion:  $seccion);
         if(errores::$error){
             return (new errores())->error(mensaje: 'Error al obtener datos', data: $data_template);
         }
-
 
 
         $number = $data_template->number;
@@ -64,14 +63,14 @@ class base{
         return $data_template;
     }
 
-    private function include_items(int $number_active, int $registro_id, string $seccion, int $total_items_sections): array
+    private function include_items(bool $aplica_link, int $number_active, int $registro_id, string $seccion, int $total_items_sections): array
     {
         $i = 1;
         $data_html = array();
         while($i<=$total_items_sections){ ?>
             <hr class="hr-menu-lateral">
             <?php
-            $data_template = $this->include_item(i:$i,number_active:  $number_active,
+            $data_template = $this->include_item(aplica_link:$aplica_link,i:$i,number_active:  $number_active,
                 registro_id: $registro_id,seccion:  $seccion);
             if(errores::$error){
                 return (new errores())->error(mensaje: 'Error al integrar include', data: $data_template);
@@ -83,26 +82,29 @@ class base{
     }
 
 
-    private function include_number(string $color, int $i, string $seccion): string
+    private function include_number(bool $aplica_link, string $color, int $i, string $seccion): string
     {
-
-        if($color === 'azul') {
-            $include = "templates/$seccion/_base/buttons/number.$color.php";
+        if($aplica_link) {
+            if ($color === 'azul') {
+                $include = "templates/$seccion/_base/buttons/number.$color.php";
+            } else {
+                $include = "templates/$seccion/_base/links/$i.php";
+            }
         }
         else{
-            $include = "templates/$seccion/_base/links/$i.php";
+            $include  = "templates/$seccion/_base/buttons/number.gris.php";
         }
 
         return $include;
     }
 
-    private function init_data_template(int $i, int $number_active, string $seccion): array|stdClass
+    private function init_data_template(bool $aplica_link, int $i, int $number_active, string $seccion): array|stdClass
     {
         $data_template = $this->data_template_section(i:$i,number_active:  $number_active);
         if(errores::$error){
             return (new errores())->error(mensaje: 'Error al obtener datos', data: $data_template);
         }
-        $include  = $this->include_number(color: $data_template->color,i: $i,seccion: $seccion);
+        $include  = $this->include_number(aplica_link:$aplica_link,color: $data_template->color,i: $i,seccion: $seccion);
         if(errores::$error){
             return (new errores())->error(mensaje: 'Error al obtener include', data: $include);
         }
