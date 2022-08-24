@@ -13,7 +13,7 @@ class base{
         return $color;
     }
 
-    public function data_template_section(int $i, int $number_active): array|stdClass
+    private function data_template_section(int $i, int $number_active): array|stdClass
     {
         $color = $this->color(i:$i,number_active:  $number_active);
         if(errores::$error){
@@ -31,7 +31,9 @@ class base{
         return $data;
     }
 
-    public function include_number(string $color, int $i, string $seccion): string
+
+
+    private function include_number(string $color, int $i, string $seccion): string
     {
 
         if($color === 'azul') {
@@ -42,6 +44,20 @@ class base{
         }
 
         return $include;
+    }
+
+    public function init_data_template(int $i, int $number_active, string $seccion): array|stdClass
+    {
+        $data_template = $this->data_template_section(i:$i,number_active:  $number_active);
+        if(errores::$error){
+            return (new errores())->error(mensaje: 'Error al obtener datos', data: $data_template);
+        }
+        $include  = $this->include_number(color: $data_template->color,i: $i,seccion: $seccion);
+        if(errores::$error){
+            return (new errores())->error(mensaje: 'Error al obtener include', data: $include);
+        }
+        $data_template->include = $include;
+        return $data_template;
     }
 
 
