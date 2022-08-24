@@ -2,6 +2,7 @@
 namespace templates;
 use config\generales;
 use gamboamartin\errores\errores;
+use gamboamartin\system\system;
 use stdClass;
 
 class base{
@@ -12,6 +13,21 @@ class base{
             $color = 'azul';
         }
         return $color;
+    }
+
+    public function contenido_menu_lateral(system $controlador,string $titulo): array
+    {
+        echo "<div class='col-md-8'>";
+        echo "<h3>$titulo</h3>";
+        $data_template = $this->include_items(number_active: $controlador->number_active,
+            registro_id:  $controlador->registro_id, seccion: $controlador->seccion,
+            total_items_sections: $controlador->total_items_sections);
+        if(errores::$error){
+            return (new errores())->error(mensaje: 'Error al integrar include', data: $data_template);
+        }
+        echo "</div>";
+        return $data_template;
+
     }
 
     private function data_template_section(int $i, int $number_active): array|stdClass
@@ -32,14 +48,15 @@ class base{
         return $data;
     }
 
-    public function include_item(int $i, int $number_active, int $registro_id, string $seccion): array|stdClass
+    private function include_item(int $i, int $number_active, int $registro_id, string $seccion): array|stdClass
     {
+        $session_id = (new generales())->session_id;
         $data_template = $this->init_data_template(i:$i,number_active: $number_active,seccion:  $seccion);
         if(errores::$error){
             return (new errores())->error(mensaje: 'Error al obtener datos', data: $data_template);
         }
 
-        $session_id = (new generales())->session_id;
+
 
         $number = $data_template->number;
 
@@ -47,7 +64,7 @@ class base{
         return $data_template;
     }
 
-    public function include_items(int $number_active, int $registro_id, string $seccion, int $total_items_sections): array
+    private function include_items(int $number_active, int $registro_id, string $seccion, int $total_items_sections): array
     {
         $i = 1;
         $data_html = array();
