@@ -1,4 +1,4 @@
 <?php /** @var string $seccion */ ?>
 <?php use config\views; ?>
 <?php include (new views())->ruta_templates."number.php"; ?>
-<?php include "templates/$seccion/_base/texto_menu_lateral/ubicacion.php"; ?>
+<?php echo($controlador->html_base->menu_lateral('Ubicacion')); ?>

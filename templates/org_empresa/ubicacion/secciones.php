@@ -1,11 +1,9 @@
 <?php
 /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */
-use config\views;
+
 use gamboamartin\errores\errores;
 
 use tglobally\template_tg\menu_lateral;
-
-$url_assets = (new views())->url_assets;
 
 ?>
 <div class="col-md-3 secciones">
