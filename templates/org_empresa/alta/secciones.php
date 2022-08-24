@@ -24,20 +24,18 @@ $url_assets = (new views())->url_assets;
                 <hr class="hr-menu-lateral">
                 <?php
 
-                $color = (new base())->color(i:$i,number_active:  $controlador->number_active);
+                $data_template = (new base())->data_template_section(i:$i,number_active:  $controlador->number_active);
                 if(gamboamartin\errores\errores::$error){
-                    return (new errores())->error(mensaje: 'Error al obtener color', data: $color);
+                    return (new errores())->error(mensaje: 'Error al obtener datos', data: $data_template);
                 }
-
-                $number = (new base())->number(color: $color, i:$i);
-                if(gamboamartin\errores\errores::$error){
-                    return (new errores())->error(mensaje: 'Error al obtener number', data: $color);
-                }
+                $number = $data_template->number;
+                $color = $data_template->color;
                 $include  = (new base())->include_number(color: $color,i: $i,seccion: $controlador->seccion);
                 if(gamboamartin\errores\errores::$error){
                     return (new errores())->error(mensaje: 'Error al obtener include', data: $color);
                 }
                 include $include;
+                $i++;
 
                 $i++;
 
