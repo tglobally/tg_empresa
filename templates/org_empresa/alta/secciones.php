@@ -29,17 +29,16 @@ $url_assets = (new views())->url_assets;
                     return (new errores())->error(mensaje: 'Error al obtener color', data: $color);
                 }
 
-                $number = (new base())->number(i:$i,color: $color);
+                $number = (new base())->number(color: $color, i:$i);
                 if(gamboamartin\errores\errores::$error){
                     return (new errores())->error(mensaje: 'Error al obtener number', data: $color);
                 }
+                $include  = (new base())->include_number(color: $color,i: $i,seccion: $controlador->seccion);
+                if(gamboamartin\errores\errores::$error){
+                    return (new errores())->error(mensaje: 'Error al obtener include', data: $color);
+                }
+                include $include;
 
-                if($color === 'azul') {
-                    include "templates/$controlador->seccion/_base/buttons/number.$color.php";
-                }
-                else{
-                    include "templates/$controlador->seccion/_base/links/$i.php";
-                }
                 $i++;
 
             }

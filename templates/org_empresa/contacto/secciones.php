@@ -34,12 +34,11 @@ $url_assets = (new views())->url_assets;
                 if(gamboamartin\errores\errores::$error){
                     return (new errores())->error(mensaje: 'Error al obtener number', data: $color);
                 }
-                if($color === 'azul') {
-                    include "templates/$controlador->seccion/_base/buttons/number.$color.php";
+                $include  = (new base())->include_number(color: $color,i: $i,seccion: $controlador->seccion);
+                if(gamboamartin\errores\errores::$error){
+                    return (new errores())->error(mensaje: 'Error al obtener include', data: $color);
                 }
-                else{
-                    include "templates/$controlador->seccion/_base/links/$i.php";
-                }
+                include $include;
                 $i++;
 
             }

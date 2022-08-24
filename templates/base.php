@@ -10,7 +10,20 @@ class base{
         return $color;
     }
 
-    public function number(int $i, string $color): string
+    public function include_number(string $color, int $i, string $seccion): string
+    {
+        $include = '';
+        if($color === 'azul') {
+            $include = "templates/$seccion/_base/buttons/number.$color.php";
+        }
+        else{
+            $include = "templates/$seccion/_base/links/$i.php";
+        }
+
+        return $include;
+    }
+
+    public function number( string $color, int $i): string
     {
         return "$i.$color";
     }
