@@ -13,6 +13,10 @@ use stdClass;
 use tglobally\template_tg\html;
 use tglobally\template_tg\menu_lateral;
 
+
+/**
+ * este contralador se encarga de generar el contructor que define los parametros y da un titulo a la lista
+ */
 class controlador_org_empresa extends \gamboamartin\organigrama\controllers\controlador_org_empresa {
 
 

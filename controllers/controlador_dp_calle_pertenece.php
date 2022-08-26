@@ -13,6 +13,9 @@ namespace tglobally\tg_empresa\controllers;
 use PDO;
 use stdClass;
 
+/**
+ * este contralador se encarga de generar el contructor que define los parametros y da un titulo a la lista
+ */
 
 class controlador_dp_calle_pertenece extends \controllers\controlador_dp_calle_pertenece {
 

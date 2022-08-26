@@ -23,6 +23,11 @@ use models\tg_com_tipo_ali;
 use PDO;
 use stdClass;
 
+
+/**
+ * este contralador se encarga de generar el contructor que define los parametros y da un titulo a la lista
+ */
+
 class controlador_tg_com_tipo_ali extends system {
 
     public function __construct(PDO $link, html $html = new \gamboamartin\template_1\html(),

@@ -17,6 +17,10 @@ use PDO;
 use stdClass;
 use tglobally\template_tg\html;
 
+
+/**
+ * este contralador se encarga de generar el contructor que define los parametros y da un titulo a la lista
+ */
 class controlador_org_porcentaje_act_economica extends \gamboamartin\organigrama\controllers\controlador_org_porcentaje_act_economica {
 
     public array $actividades_economicas = array();

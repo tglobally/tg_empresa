@@ -16,6 +16,10 @@ use PDO;
 use stdClass;
 use tglobally\template_tg\html;
 
+
+/**
+ * este contralador se encarga de generar el contructor que define los parametros y da un titulo a la lista
+ */
 class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\controlador_org_sucursal {
     public array $sucursales = array();
     public string $rfc = '';
