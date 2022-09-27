@@ -26,14 +26,6 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
         parent::__construct( link: $link, html: $html_base);
         $this->titulo_lista = 'Empresas';
 
-        $menu_lateral = (new menu_lateral())->number_head(number_active: $this->number_active);
-        if(errores::$error){
-            $error = $this->errores->error(mensaje: 'Error al integrar include', data: '');
-            print_r($error);
-            exit;
-        }
-        $this->menu_lateral = $menu_lateral;
-
     }
 
 
