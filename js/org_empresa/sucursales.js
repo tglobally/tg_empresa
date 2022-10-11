@@ -5,8 +5,6 @@ function getAbsolutePath() {
 }
 let url = getAbsolutePath();
 
-let direcciones_js = url+'js/direcciones.js';
-
-document.write('<script src="'+direcciones_js+'"></script>');
+document.write('<script src="/../tg_empresa/js/direcciones.js"></script>');
 
 let session_id = getParameterByName('session_id');
