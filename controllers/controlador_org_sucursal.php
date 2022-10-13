@@ -9,9 +9,9 @@
 namespace tglobally\tg_empresa\controllers;
 
 use gamboamartin\errores\errores;
+use gamboamartin\organigrama\models\org_empresa;
+use gamboamartin\organigrama\models\org_sucursal;
 use gamboamartin\system\init;
-use models\org_empresa;
-use models\org_sucursal;
 use PDO;
 use stdClass;
 use tglobally\template_tg\html;
