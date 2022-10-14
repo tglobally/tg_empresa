@@ -15,10 +15,7 @@
 
 
                 <div class="buttons col-md-12">
-                    <div class="col-md-6 btn-ancho">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12" name="btn_action_next" value="Sucursales" >Sucursales</button>
-                    </div>
-                    <div class="col-md-6 btn-ancho">
+                    <div class="col-md-12 btn-ancho">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12" name="btn_action_next" value="departamentos" >Guarda</button>
                     </div>
 

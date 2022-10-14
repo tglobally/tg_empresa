@@ -12,8 +12,13 @@
                 <?php echo $controlador->inputs->codigo_bis; ?>
                 <?php echo $controlador->inputs->descripcion; ?>
                 <div class="buttons col-md-12">
-                    <?php echo $controlador->btns['sub_guarda']; ?>
-                    <?php echo $controlador->btns['sub_siguiente_ubicacion']; ?>
+                    <div class="col-md-6 btn-ancho">
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="modifica">Alta</button>
+                    </div>
+                    <div class="col-md-6 btn-ancho">
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="departamentos">Siguiente</button>
+                    </div>
+
                 </div>
             </form>
         </div>
