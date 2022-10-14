@@ -8,7 +8,7 @@ $session_id = $controlador->session_id;
 
         <div class="col-md-8">
             <h3>Empresas</h3>
-            <?php include "templates/org_clasificacion_dep/_base/links/alta.php"; ?>
+            <?php include "templates/org_empresa/_base/links/alta.php"; ?>
         </div>
     </div>
 </div>

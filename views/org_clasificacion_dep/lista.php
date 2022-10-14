@@ -5,7 +5,7 @@ use config\views;
 $url_icons = (new views())->url_icons;
 ?>
 
-<?php include 'templates/org_empresa/lista/secciones.php'; ?>
+<?php include 'templates/org_clasificacion_dep/lista/secciones.php'; ?>
 
 
 <div class="col-md-9 info-lista">
