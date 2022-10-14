@@ -5,7 +5,7 @@ use config\views;
 $url_icons = (new views())->url_icons;
 ?>
 
-<?php include 'templates/org_clasificacion_dep/lista/secciones.php'; ?>
+<?php include 'templates/org_empresa/lista/secciones.php'; ?>
 
 
 <div class="col-md-9 info-lista">
@@ -21,9 +21,9 @@ $url_icons = (new views())->url_icons;
                             <thead>
                             <tr>
                                 <th data-breakpoints="xs sm md" data-type="html" >Id</th>
-                                <th data-breakpoints="xs sm md" data-type="html" >RFC</th>
-                                <th data-breakpoints="xs sm md" data-type="html" >Razón Social</th>
-                                <th data-breakpoints="xs sm md" data-type="html" >Nombre Comercial</th>
+                                <th data-breakpoints="xs sm md" data-type="html" >Codigo</th>
+                                <th data-breakpoints="xs sm md" data-type="html" >Codigo BIS</th>
+                                <th data-breakpoints="xs sm md" data-type="html" >Descripcion</th>
                                 <th data-breakpoints="xs md" class="control"  data-type="html" data-filterable="false">Modifica</th>
                                 <th data-breakpoints="xs md" class="control"  data-type="html" data-filterable="false">Elimina</th>
                             </tr>
@@ -31,10 +31,10 @@ $url_icons = (new views())->url_icons;
                             <tbody>
                             <?php foreach ($controlador->registros as $registro){?>
                                 <tr>
-                                    <td><?php echo $registro->org_empresa_id; ?></td>
-                                    <td><?php echo $registro->org_empresa_rfc; ?></td>
-                                    <td><?php echo $registro->org_empresa_razon_social; ?></td>
-                                    <td><?php echo $registro->org_empresa_nombre_comercial; ?></td>
+                                    <td><?php echo $registro->org_clasificacion_dep_id; ?></td>
+                                    <td><?php echo $registro->org_clasificacion_dep_codigo; ?></td>
+                                    <td><?php echo $registro->org_clasificacion_dep_codigo_bis; ?></td>
+                                    <td><?php echo $registro->org_clasificacion_dep_descripcion; ?></td>
                                     <td><a class="btn btn-warning " href="<?php echo $registro->link_modifica; ?>">Modifica</a></td>
                                     <td><a class="btn btn-danger " href="<?php echo $registro->link_elimina_bd; ?>">Elimina</a></td>
                                 </tr>
