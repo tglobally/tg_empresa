@@ -22,6 +22,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
     public string $link_alta_org_empresa = '';
     public string $link_lista_org_empresa = '';
+    public string $link_alta_org_clasificacion_dep = '';
+    public string $link_lista_org_clasificacion_dep = '';
 
     /**
      * Funcion de controlador donde se ejecutaran siempre que haya un acceso denegado
@@ -62,6 +64,12 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
         $hd = "index.php?seccion=org_empresa&accion=lista&session_id=$this->session_id";
         $this->link_lista_org_empresa = $hd;
+
+        $hd = "index.php?seccion=org_clasificacion_dep&accion=alta&session_id=$this->session_id";
+        $this->link_alta_org_clasificacion_dep = $hd;
+
+        $hd = "index.php?seccion=org_clasificacion_dep&accion=lista&session_id=$this->session_id";
+        $this->link_lista_org_clasificacion_dep = $hd;
 
         $this->include_menu = (new generales())->path_base;
         $this->include_menu .= 'templates/inicio.php';
