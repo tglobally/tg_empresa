@@ -35,6 +35,7 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
 
     public function alta(bool $header, bool $ws = false, bool $org_empresa_id_disabled = false): array|string
     {
+        $disabled_org_empresa = $org_empresa_id_disabled;
 
         if(isset($_GET['org_empresa_id'])){
             $this->org_empresa_id = $_GET['org_empresa_id'];
@@ -63,8 +64,11 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
             $this->razon_social = $registro['org_empresa_razon_social'];
         }
 
-        $this->registro_id = $_GET['org_empresa_id'];
-        $r_alta = parent::alta($header, $ws, true);
+        if(isset($_GET['org_empresa_id'])){
+            $this->registro_id = $_GET['org_empresa_id'];
+            $disabled_org_empresa = false;
+        }
+        $r_alta = parent::alta($header, $ws, org_empresa_id_disabled: $disabled_org_empresa);
         if(errores::$error){
             return $this->retorno_error(mensaje: 'Error al maquetar alta',data:  $r_alta, header: $header,ws:$ws);
         }
