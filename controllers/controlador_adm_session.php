@@ -71,6 +71,9 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
         $hd = "index.php?seccion=org_clasificacion_dep&accion=lista&session_id=$this->session_id";
         $this->link_lista_org_clasificacion_dep = $hd;
 
+        $hd = "index.php?seccion=org_sucursal&accion=lista&session_id=$this->session_id";
+        $this->link_lista_org_sucursal = $hd;
+
         $this->include_menu = (new generales())->path_base;
         $this->include_menu .= 'templates/inicio.php';
 
