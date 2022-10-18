@@ -13,6 +13,7 @@
                 <?php echo $controlador->inputs->codigo_bis; ?>
                 <?php echo $controlador->inputs->select->org_tipo_sucursal_id; ?>
 
+                <?php echo $controlador->inputs->serie; ?>
                 <?php echo $controlador->inputs->fecha_inicio_operaciones; ?>
 
                 <?php echo $controlador->inputs->select->dp_pais_id; ?>

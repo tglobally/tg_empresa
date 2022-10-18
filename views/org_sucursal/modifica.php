@@ -9,11 +9,11 @@
             <form method="post" action="./index.php?seccion=<?php echo $controlador->tabla; ?>&accion=modifica_bd&session_id=<?php echo $controlador->session_id; ?>&registro_id=<?php echo $controlador->registro_id; ?>" class="form-additional">
 
                 <?php echo $controlador->inputs->id; ?>
-                <?php echo $controlador->inputs->select->org_empresa_id; ?>
                 <?php echo $controlador->inputs->codigo; ?>
-                <?php echo $controlador->inputs->codigo_bis; ?>
                 <?php echo $controlador->inputs->select->org_tipo_sucursal_id; ?>
+                <?php echo $controlador->inputs->select->org_empresa_id; ?>
 
+                <?php echo $controlador->inputs->serie; ?>
                 <?php echo $controlador->inputs->fecha_inicio_operaciones; ?>
 
                 <?php echo $controlador->inputs->select->dp_pais_id; ?>
