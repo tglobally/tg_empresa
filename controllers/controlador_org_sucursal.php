@@ -31,8 +31,36 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
         parent::__construct( link: $link, html: $html_base);
         $this->titulo_lista = 'Sucursal';
 
+        $this->sidebar['lista']['titulo'] = "Sucursales";
+        $this->sidebar['lista']['menu'] = array(
+            $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_seccion_active: true,menu_lateral_active: true));
+
+        $this->sidebar['alta']['titulo'] = "Alta Sucursal";
+        $this->sidebar['alta']['stepper_active'] = true;
+        $this->sidebar['alta']['menu'] = array(
+            $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_lateral_active: true),
+            $this->menu_item(menu_item_titulo: "Registro Patronal", link: $this->link_alta));
+
+        $this->sidebar['modifica']['titulo'] = "Modifica Sucursal";
+        $this->sidebar['modifica']['stepper_active'] = true;
+        $this->sidebar['modifica']['menu'] = array(
+            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_alta,menu_lateral_active: true),
+            $this->menu_item(menu_item_titulo: "Registro Patronal", link: $this->link_alta));
     }
 
+    public function menu_item(string $menu_item_titulo, string $link, bool $menu_seccion_active = false,bool $menu_lateral_active = false): array
+    {
+        $menu_item = array();
+        $menu_item['menu_item'] = $menu_item_titulo;
+        $menu_item['menu_seccion_active'] = $menu_seccion_active;
+        $menu_item['link'] = $link;
+        $menu_item['menu_lateral_active'] = $menu_lateral_active;
+
+        return $menu_item;
+    }
+
+
+    /**
     public function alta(bool $header, bool $ws = false, bool $org_empresa_id_disabled = false): array|string
     {
         $disabled_org_empresa = $org_empresa_id_disabled;
@@ -88,7 +116,7 @@ class controlador_org_sucursal extends \gamboamartin\organigrama\controllers\con
             header('Location: index.php?seccion=org_sucursal&accion=alta&registro_id='.$registro_id.'&session_id='.$this->session_id);
         }
         return $r_alta_bd;
-    }
+    }*/
 
     /**
      * Maqueta las sucursales de una empresa
