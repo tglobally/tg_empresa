@@ -18,39 +18,19 @@ $url_assets = (new views())->url_assets;
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="col-sm-2">
-                <a href="<?php echo $controlador->link_lista_org_empresa; ?>">
-                    <div class="cont_imagen_accion">
-                        <img src="<?php echo $url_assets; ?>img/inicio/imagen_2.jpg">
-                    </div>
-                    <div class="cont_text_accion">
-                        <h4 class="text_seccion">Empresas</h4>
-                        <h4 class="text_accion">Catologo</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-2">
-                <a href="<?php echo $controlador->link_lista_org_clasificacion_dep; ?>">
-                    <div class="cont_imagen_accion">
-                        <img src="<?php echo $url_assets; ?>img/inicio/imagen_2.jpg">
-                    </div>
-                    <div class="cont_text_accion">
-                        <h4 class="text_seccion">Clasificacion Dep.</h4>
-                        <h4 class="text_accion">Catologo</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-2">
-                <a href="<?php echo $controlador->link_lista_org_sucursal; ?>">
-                    <div class="cont_imagen_accion">
-                        <img src="<?php echo $url_assets; ?>img/inicio/imagen_2.jpg">
-                    </div>
-                    <div class="cont_text_accion">
-                        <h4 class="text_seccion">Sucursales</h4>
-                        <h4 class="text_accion">Catologo</h4>
-                    </div>
-                </a>
-            </div>
+            <?php foreach ($controlador->links_catalogos as $indice => $valor): ?>
+                <div class="col-sm-2">
+                    <a href="<?php echo $valor["link"];?>">
+                        <div class="cont_imagen_accion">
+                            <img src="<?php echo $url_assets; ?>img/inicio/imagen_2.jpg">
+                        </div>
+                        <div class="cont_text_accion">
+                            <h4 class="text_seccion"><?php echo $valor["titulo"];?></h4>
+                            <h4 class="text_accion"><?php echo $valor["subtitulo"];?></h4>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

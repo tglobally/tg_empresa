@@ -23,7 +23,37 @@ class controlador_org_clasificacion_dep extends \gamboamartin\organigrama\contro
         parent::__construct( link: $link, html: $html_base);
         $this->titulo_lista = 'Clasificacion Departamento';
 
+        $this->sidebar['lista']['titulo'] = "Clasificacion Departamento";
+        $this->sidebar['lista']['menu'] = array(
+            $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_seccion_active: true,
+                menu_lateral_active: true));
+
+        $this->sidebar['alta']['titulo'] = "Clasificacion Departamento";
+        $this->sidebar['alta']['stepper_active'] = true;
+        $this->sidebar['alta']['menu'] = array(
+            $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_lateral_active: true));
+
+        $this->sidebar['modifica']['titulo'] = "Clasificacion Departamento";
+        $this->sidebar['modifica']['stepper_active'] = true;
+        $this->sidebar['modifica']['menu'] = array(
+            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_alta,menu_lateral_active: true));
+
+        $this->sidebar['departamentos']['titulo'] = "Clasificacion Dep.";
+        $this->sidebar['departamentos']['stepper_active'] = true;
+        $this->sidebar['departamentos']['menu'] = array(
+            $this->menu_item(menu_item_titulo: "Departamento", link: $this->link_alta,menu_lateral_active: true));
+
     }
 
+    public function menu_item(string $menu_item_titulo, string $link, bool $menu_seccion_active = false,bool $menu_lateral_active = false): array
+    {
+        $menu_item = array();
+        $menu_item['menu_item'] = $menu_item_titulo;
+        $menu_item['menu_seccion_active'] = $menu_seccion_active;
+        $menu_item['link'] = $link;
+        $menu_item['menu_lateral_active'] = $menu_lateral_active;
+
+        return $menu_item;
+    }
 
 }
