@@ -19,7 +19,7 @@ use stdClass;
 
 class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_session {
 
-    public array $secciones = array("org_clasificacion_dep");
+    public array $secciones = array("org_clasificacion_dep","org_sucursal");
     public array $links_catalogos = array();
     public stdClass $links;
 
@@ -46,6 +46,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
         $this->links_catalogos["org_clasificacion_dep"]["titulo"] = "Clasificacion Dep";
         $this->links_catalogos["org_clasificacion_dep"]["subtitulo"] = "Catalogo";
+        $this->links_catalogos["org_sucursal"]["titulo"] = "Sucursal";
+        $this->links_catalogos["org_sucursal"]["subtitulo"] = "Catalogo";
 
     }
 
