@@ -19,19 +19,13 @@ use stdClass;
 
 class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_session {
 
-    public array $secciones = array("org_clasificacion_dep","org_sucursal");
+    public array $secciones = array("org_empresa","org_clasificacion_dep","org_sucursal");
     public array $links_catalogos = array();
     public stdClass $links;
-
 
     public bool $existe_msj = false;
     public string $include_menu = '';
     public string $mensaje_html = '';
-
-    public string $link_alta_org_empresa = '';
-    public string $link_lista_org_empresa = '';
-    public string $link_alta_org_clasificacion_dep = '';
-    public string $link_lista_org_clasificacion_dep = '';
 
     public function __construct(PDO $link, stdClass $paths_conf = new stdClass())
     {
@@ -44,6 +38,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
             die('Error');
         }
 
+        $this->links_catalogos["org_empresa"]["titulo"] = "Empresa";
+        $this->links_catalogos["org_empresa"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["org_clasificacion_dep"]["titulo"] = "Clasificacion Dep";
         $this->links_catalogos["org_clasificacion_dep"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["org_sucursal"]["titulo"] = "Sucursal";
