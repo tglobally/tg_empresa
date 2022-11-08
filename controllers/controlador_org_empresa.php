@@ -29,4 +29,6 @@ class controlador_org_empresa extends \gamboamartin\organigrama\controllers\cont
     }
 
 
+
+
 }
