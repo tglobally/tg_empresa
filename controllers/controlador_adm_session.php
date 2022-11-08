@@ -64,7 +64,7 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public function get_link(string $seccion, string $accion = "lista"): array|string
     {
         if (!property_exists($this->links, $seccion)) {
-            $error = $this->errores->error(mensaje: 'Error no existe la seccion', data: $seccion);
+            $error = $this->errores->error(mensaje: "Error no existe la seccion: $seccion", data: $seccion);
             print_r($error);
             die('Error');
         }
