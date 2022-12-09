@@ -10,10 +10,15 @@
 
         <div class="  form-main" id="form">
             <form method="post" action="<?php echo $controlador->link_org_departamento_alta_bd;?>" class="form-additional">
-                <?php echo $controlador->inputs->org_empresa_id; ?>
-                    <?php echo $controlador->inputs->org_clasificacion_dep_id; ?>
-                    <?php echo $controlador->inputs->codigo; ?>
-                    <?php echo $controlador->inputs->descripcion; ?>
+
+                <?php echo $controlador->inputs->select->org_clasificacion_dep_id; ?>
+                <?php echo $controlador->inputs->select->org_empresa_id; ?>
+
+                <?php echo $controlador->inputs->org_departamento_descripcion; ?>
+
+                <?php echo $controlador->inputs->hidden_row_id; ?>
+                <?php echo $controlador->inputs->hidden_seccion_retorno; ?>
+                <?php echo $controlador->inputs->hidden_id_retorno; ?>
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="modifica">Guarda</button>
@@ -32,7 +37,7 @@
                 </div>
                 <div class="card-body">
                     <div class="cont_tabla_sucursal  col-md-12">
-                        <table id="org_departamento" class="table table-striped" ></table>
+                        <?php echo $controlador->contenido_table; ?>
                     </div>
                 </div>
             </div>
