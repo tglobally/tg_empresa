@@ -15,7 +15,7 @@
           "tglobally\\tg_empresa\\controllers\\": "controllers",
             "config\\": "config/",
             "models\\": "orm",
-            "tests\\": "tests/",
+            "tglobally\\tg_empresa\\tests\\": "tests",
             "links\\": "links/",
             "templates\\": "templates/",
             "html\\": "templates/directivas/"

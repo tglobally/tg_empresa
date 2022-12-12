@@ -7,11 +7,9 @@
  *
  */
 namespace tglobally\tg_empresa\controllers;
-use gamboamartin\errores\errores;
 use PDO;
 use stdClass;
 use tglobally\template_tg\html;
-use tglobally\template_tg\menu_lateral;
 
 
 class controlador_org_clasificacion_dep extends \gamboamartin\organigrama\controllers\controlador_org_clasificacion_dep {
@@ -20,7 +18,7 @@ class controlador_org_clasificacion_dep extends \gamboamartin\organigrama\contro
     public function __construct(PDO $link, stdClass $paths_conf = new stdClass()){
 
         $html_base = new html();
-        parent::__construct( link: $link, html: $html_base);
+        parent::__construct( link: $link, html: $html_base, paths_conf: $paths_conf);
         $this->titulo_lista = 'Clasificacion Departamento';
 
         $this->sidebar['lista']['titulo'] = "Clasificacion Departamento";
@@ -45,7 +43,8 @@ class controlador_org_clasificacion_dep extends \gamboamartin\organigrama\contro
 
     }
 
-    public function menu_item(string $menu_item_titulo, string $link, bool $menu_seccion_active = false,bool $menu_lateral_active = false): array
+    public function menu_item(string $menu_item_titulo, string $link, bool $menu_seccion_active = false,
+                              bool $menu_lateral_active = false): array
     {
         $menu_item = array();
         $menu_item['menu_item'] = $menu_item_titulo;
