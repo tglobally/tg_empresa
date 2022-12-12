@@ -12,8 +12,6 @@ use config\generales;
 use gamboamartin\errores\errores;
 use gamboamartin\system\links_menu;
 use JsonException;
-use models\adm_accion;
-use models\adm_usuario;
 use PDO;
 use stdClass;
 
@@ -29,14 +27,17 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
     public function __construct(PDO $link, stdClass $paths_conf = new stdClass())
     {
-        parent::__construct($link, $paths_conf);
+        parent::__construct(link: $link,paths_conf:  $paths_conf);
 
-        $this->links = (new links_menu(link: $link, registro_id: $this->registro_id))->genera_links($this);
+        $links = (new links_menu(link: $link, registro_id: $this->registro_id))->genera_links(controler: $this);
         if (errores::$error) {
-            $error = $this->errores->error(mensaje: 'Error al inicializar links', data: $this->links);
+            $error = $this->errores->error(mensaje: 'Error al inicializar links', data: $links);
             print_r($error);
             die('Error');
         }
+
+
+        $this->links = $links;
 
         $this->links_catalogos["org_empresa"]["titulo"] = "Empresa";
         $this->links_catalogos["org_empresa"]["subtitulo"] = "Catalogo";
@@ -63,7 +64,17 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
     public function get_link(string $seccion, string $accion = "lista"): array|string
     {
+
         if (!property_exists($this->links, $seccion)) {
+
+
+            $links = (new links_menu(link: $this->link, registro_id: $this->registro_id))->genera_links(controler: $this);
+            if (errores::$error) {
+                $error = $this->errores->error(mensaje: 'Error al inicializar links', data: $links);
+                print_r($error);
+                die('Error');
+            }
+
             $error = $this->errores->error(mensaje: "Error no existe la seccion: $seccion", data: $seccion);
             print_r($error);
             die('Error');
