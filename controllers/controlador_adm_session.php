@@ -9,15 +9,18 @@
 namespace tglobally\tg_empresa\controllers;
 
 use config\generales;
+use config\views;
 use gamboamartin\errores\errores;
 use gamboamartin\system\links_menu;
 use JsonException;
 use PDO;
 use stdClass;
+use tglobally\tg_empresa\controllers\html\_base;
 
 class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_session {
 
-    public array $secciones = array("org_empresa","org_clasificacion_dep","org_sucursal");
+    public array $secciones = array("org_tipo_empresa", "org_empresa",
+        "org_clasificacion_dep","org_sucursal");
     public array $links_catalogos = array();
     public stdClass $links;
 
@@ -39,12 +42,15 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
         $this->links = $links;
 
+        $this->links_catalogos["org_tipo_empresa"]['titulo'] = 'Tipos de empresa';
+
         $this->links_catalogos["org_empresa"]["titulo"] = "Empresa";
         $this->links_catalogos["org_empresa"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["org_clasificacion_dep"]["titulo"] = "Clasificacion Dep";
         $this->links_catalogos["org_clasificacion_dep"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["org_sucursal"]["titulo"] = "Sucursal";
         $this->links_catalogos["org_sucursal"]["subtitulo"] = "Catalogo";
+
 
     }
 
@@ -64,26 +70,23 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
     public function get_link(string $seccion, string $accion = "lista"): array|string
     {
-
-        if (!property_exists($this->links, $seccion)) {
-
-
-            $links = (new links_menu(link: $this->link, registro_id: $this->registro_id))->genera_links(controler: $this);
-            if (errores::$error) {
-                $error = $this->errores->error(mensaje: 'Error al inicializar links', data: $links);
-                print_r($error);
-                die('Error');
-            }
-
-            $error = $this->errores->error(mensaje: "Error no existe la seccion: $seccion", data: $seccion);
-            print_r($error);
-            die('Error');
+        $seccion = trim($seccion);
+        if($seccion === ''){
+            return $this->errores->error(mensaje: 'Error seccion esta vacia', data: $seccion);
+        }
+        $accion = trim($accion);
+        if($accion === ''){
+            return $this->errores->error(mensaje: 'Error accion esta vacia', data: $accion);
         }
 
+        if (!property_exists($this->links, $seccion)) {
+            $links = (new links_menu(link: $this->link, registro_id: $this->registro_id))->genera_links(controler: $this);
+            if (errores::$error) {
+                return $this->errores->error(mensaje: 'Error al inicializar links', data: $links);
+            }
+        }
         if (!property_exists($this->links->$seccion, $accion)) {
-            $error = $this->errores->error(mensaje: 'Error no existe la accion', data: $accion);
-            print_r($error);
-            die('Error');
+            return $this->errores->error(mensaje: 'Error no existe la accion', data: $accion);
         }
 
         return $this->links->$seccion->$accion;
@@ -109,10 +112,13 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
             return $this->retorno_error(mensaje:  'Error al generar template',data: $template, header: $header, ws: $ws);
         }
 
-        $this->links_catalogos = $this->inicializar_links();
+        $links_catalogos = $this->inicializar_links();
         if(errores::$error){
-            return $this->errores->error(mensaje: 'Error al inicializar links', data: $this->links_catalogos);
+            return $this->retorno_error(mensaje: 'Error al inicializar links', data: $links_catalogos,
+                header: $header,ws: $ws);
         }
+
+        $this->links_catalogos = $links_catalogos;
 
         $this->include_menu = (new generales())->path_base;
         $this->include_menu .= 'templates/inicio.php';
@@ -122,32 +128,43 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
     public function inicializar_links(): array
     {
-        foreach ($this->secciones as $link => $valor){
-
-            $seccion = $valor;
-            $accion = "lista";
-
-            if (!is_numeric($link)){
-                $seccion = $link;
-                $accion = $valor;
+        foreach ($this->secciones as $seccion){
+            $seccion = trim($seccion);
+            if($seccion === ''){
+                return $this->errores->error(mensaje: 'Error seccion esta vacia', data: $seccion);
             }
 
             if (!array_key_exists($seccion,$this->links_catalogos)){
                 $this->links_catalogos[$seccion] = array();
             }
-
-            if (!array_key_exists("titulo",$this->links_catalogos[$seccion])){
-                $this->links_catalogos[$seccion]["titulo"] = $seccion;
+            if(!is_array($this->links_catalogos[$seccion])){
+                return $this->errores->error(mensaje: 'Error $this->links_catalogos['.$seccion.'] debe ser un array',
+                    data: $this->links_catalogos);
             }
 
-            if (!array_key_exists("subtitulo",$this->links_catalogos[$seccion])){
-                $this->links_catalogos[$seccion]["subtitulo"] = $accion;
+            $titulo = $seccion;
+            if (array_key_exists("titulo",$this->links_catalogos[$seccion])){
+                $titulo = $this->links_catalogos[$seccion]["titulo"];
             }
 
-            $this->links_catalogos[$seccion]["link"] = $this->get_link(seccion: $seccion,accion: $accion);
+            $subtitulo = '';
+            if (array_key_exists("subtitulo",$this->links_catalogos[$seccion])){
+                $subtitulo = $this->links_catalogos[$seccion]['subtitulo'];
+            }
+
+            $link_url = $this->get_link(seccion: $seccion);
             if(errores::$error){
-                return $this->errores->error(mensaje: 'Error al obtener link', data: $this->links);
+                return $this->errores->error(mensaje: 'Error al obtener link', data: $link_url);
             }
+
+            $data_link = (new _base())->data_link(link: $link_url, subtitulo: $subtitulo, titulo: $titulo, url_assets: (new views())->url_assets);
+            if(errores::$error){
+                return $this->errores->error(mensaje: 'Error al obtener cont_text_accion', data: $data_link);
+            }
+            $this->links_catalogos[$seccion]['data_link'] = $data_link;
+
+
+
         }
         return $this->links_catalogos;
     }

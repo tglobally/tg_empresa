@@ -20,15 +20,7 @@ $url_assets = (new views())->url_assets;
         <div class="col-md-12">
             <?php foreach ($controlador->links_catalogos as $indice => $valor): ?>
                 <div class="col-sm-2">
-                    <a href="<?php echo $valor["link"];?>">
-                        <div class="cont_imagen_accion">
-                            <img src="<?php echo $url_assets; ?>img/inicio/imagen_2.jpg">
-                        </div>
-                        <div class="cont_text_accion">
-                            <h4 class="text_seccion"><?php echo $valor["titulo"];?></h4>
-                            <h4 class="text_accion"><?php echo $valor["subtitulo"];?></h4>
-                        </div>
-                    </a>
+                    <?php echo $valor["data_link"];?>
                 </div>
             <?php endforeach; ?>
         </div>
