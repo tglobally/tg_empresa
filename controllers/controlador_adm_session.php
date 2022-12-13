@@ -20,7 +20,7 @@ use tglobally\tg_empresa\controllers\html\_base;
 class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_session {
 
     public array $secciones = array("org_tipo_empresa", "org_empresa",
-        "org_clasificacion_dep","org_sucursal","org_tipo_puesto");
+        "org_clasificacion_dep","org_sucursal","org_tipo_puesto","org_puesto");
     public array $links_catalogos = array();
     public stdClass $links;
 
@@ -54,6 +54,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
         $this->links_catalogos["org_sucursal"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["org_tipo_puesto"]["titulo"] = "Tipos de puesto";
         $this->links_catalogos["org_tipo_puesto"]["subtitulo"] = "Catalogo";
+        $this->links_catalogos["org_puesto"]["titulo"] = "Puestos";
+        $this->links_catalogos["org_puesto"]["subtitulo"] = "Catalogo";
 
 
     }
