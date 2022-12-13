@@ -28,6 +28,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public string $include_menu = '';
     public string $mensaje_html = '';
 
+    public string $container_text_inicio = '';
+
     public function __construct(PDO $link, stdClass $paths_conf = new stdClass())
     {
         parent::__construct(link: $link,paths_conf:  $paths_conf);
@@ -122,6 +124,15 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
         $this->include_menu = (new generales())->path_base;
         $this->include_menu .= 'templates/inicio.php';
+
+        $container_text_inicio = (new _base())->container_text_inicio(nombre_usuario: $this->nombre_usuario);
+        if(errores::$error){
+            return $this->retorno_error(mensaje: 'Error al inicializar cont_text_inicio', data: $container_text_inicio,
+                header: $header,ws: $ws);
+        }
+
+        $this->container_text_inicio = $container_text_inicio;
+
 
         return $template;
     }

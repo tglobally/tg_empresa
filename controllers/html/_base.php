@@ -59,6 +59,36 @@ class _base{
         return $html;
     }
 
+    private function cont_text_inicio(string $nombre_usuario){
+
+        $h1_nombre_completo = $this->h1_nombre_usuario(nombre_usuario: $nombre_usuario);
+        if(errores::$error){
+            return $this->error->error(mensaje: 'Error al inicializar nombre usuario', data: $h1_nombre_completo);
+        }
+
+
+        $h1_click_msj = $this->h1_click_msj();
+        if(errores::$error){
+            return $this->error->error(mensaje: 'Error al inicializar h1_click_msj', data: $h1_click_msj);
+        }
+
+        return "<div class='cont_text_inicio'>
+                    $h1_nombre_completo
+                    $h1_click_msj
+                </div>";
+    }
+
+    public function container_text_inicio(string $nombre_usuario){
+        $cont_text_inicio = $this->cont_text_inicio($nombre_usuario);
+        if(errores::$error){
+            return $this->error->error(mensaje: 'Error al inicializar cont_text_inicio', data: $cont_text_inicio);
+        }
+
+        return "<div class='container'>
+                    <div class='row'><div class='col-md-12'>$cont_text_inicio</div></div>
+                </div>";
+    }
+
     public function data_link( string $link, string $subtitulo, string $titulo, string $url_assets){
 
         $cont_link = $this->cont_link(subtitulo: $subtitulo,titulo:  $titulo, url_assets: $url_assets);
@@ -67,6 +97,16 @@ class _base{
         }
 
         return "<a href='$link'> $cont_link</a>";
+    }
+
+    private function h1_click_msj(): string
+    {
+        return "<h1 class='h-side-title page-title text-color-primary'>Da click en la sección que deseas utilizar</h1>";
+    }
+
+    private function h1_nombre_usuario(string $nombre_usuario): string
+    {
+        return "<h1 class='h-side-title page-title page-title-big text-color-primary'>$nombre_usuario</h1>";
     }
 
 
