@@ -21,7 +21,7 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
     public array $secciones = array("org_tipo_empresa", "org_empresa",
         "org_clasificacion_dep","org_sucursal","org_tipo_puesto","org_puesto",
-        "org_tipo_sucursal","org_departamento");
+        "org_tipo_sucursal","org_departamento","org_tipo_actividad","org_actividad");
     public array $links_catalogos = array();
     public stdClass $links;
 
@@ -61,6 +61,10 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
         $this->links_catalogos["org_tipo_sucursal"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["org_departamento"]["titulo"] = "Departamentos";
         $this->links_catalogos["org_departamento"]["subtitulo"] = "Catalogo";
+        $this->links_catalogos["org_tipo_actividad"]["titulo"] = "Tipos de actividad";
+        $this->links_catalogos["org_tipo_actividad"]["subtitulo"] = "Catalogo";
+        $this->links_catalogos["org_actividad"]["titulo"] = "Actividad";
+        $this->links_catalogos["org_actividad"]["subtitulo"] = "Catalogo";
 
 
     }
