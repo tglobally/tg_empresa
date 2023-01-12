@@ -22,7 +22,7 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public array $secciones = array("org_tipo_empresa", "org_empresa",
         "org_clasificacion_dep","org_sucursal","org_tipo_puesto","org_puesto",
         "org_tipo_sucursal","org_departamento","org_tipo_actividad","org_actividad",
-        "org_dependencia","org_ejecuta");
+        "org_dependencia","org_ejecuta","org_empresa_clasificada");
     public array $links_catalogos = array();
     public stdClass $links;
 
@@ -70,6 +70,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
         $this->links_catalogos["org_dependencia"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["org_ejecuta"]["titulo"] = "Ejecuta";
         $this->links_catalogos["org_ejecuta"]["subtitulo"] = "Catalogo";
+        $this->links_catalogos["org_empresa_clasificada"]["titulo"] = "Empresa clasificada";
+        $this->links_catalogos["org_empresa_clasificada"]["subtitulo"] = "Catalogo";
 
 
     }
