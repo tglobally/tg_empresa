@@ -35,6 +35,11 @@ class controlador_org_departamento extends \gamboamartin\organigrama\controllers
         $this->sidebar['modifica']['menu'] = array(
             $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_alta,menu_lateral_active: true));
 
+        $this->sidebar['puestos']['titulo'] = "Puestos";
+        $this->sidebar['puestos']['stepper_active'] = true;
+        $this->sidebar['puestos']['menu'] = array(
+            $this->menu_item(menu_item_titulo: "Puestos", link: $this->link_alta,menu_lateral_active: true));
+
 
     }
 
