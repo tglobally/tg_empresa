@@ -10,13 +10,13 @@
         <div class="  form-main" id="form">
             <form method="post" action="<?php echo $controlador->link_org_puesto_alta_bd;?>" class="form-additional">
 
-                <?php echo $controlador->inputs->select->select_org_departamento_id; ?>
-                <?php echo $controlador->inputs->select->select_org_tipo_puesto_id; ?>
+                <?php echo $controlador->inputs->select->org_departamento_id; ?>
+                <?php echo $controlador->inputs->select->org_tipo_puesto_id; ?>
                 <?php echo $controlador->inputs->org_puesto_descripcion; ?>
 
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
-                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " value="modifica">Guarda</button>
+                        <button type="submit" class="btn btn-info btn-guarda col-md-12 " value="puestos">Guarda</button>
                     </div>
                     <div class="col-md-6 ">
                         <a href="<?php echo $controlador->link_lista; ?>"  class="btn btn-info btn-guarda col-md-12 ">Lista</a>
