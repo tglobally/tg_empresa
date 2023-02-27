@@ -51,11 +51,11 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
         $this->links_catalogos["org_empresa"]["titulo"] = "Empresa";
         $this->links_catalogos["org_empresa"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["org_clasificacion_dep"]["titulo"] = "Clasificacion Dep";
+        $this->links_catalogos["org_clasificacion_dep"]["titulo"] = "Clasi. Dep";
         $this->links_catalogos["org_clasificacion_dep"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["org_sucursal"]["titulo"] = "Sucursal";
         $this->links_catalogos["org_sucursal"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["org_tipo_puesto"]["titulo"] = "Tipos de puesto";
+        $this->links_catalogos["org_tipo_puesto"]["titulo"] = "Tipo puesto";
         $this->links_catalogos["org_tipo_puesto"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["org_puesto"]["titulo"] = "Puestos";
         $this->links_catalogos["org_puesto"]["subtitulo"] = "Catalogo";
