@@ -88,7 +88,16 @@ class controlador_org_tipo_empresa extends \gamboamartin\organigrama\controllers
         $this->sidebar['modifica']['stepper_active'] = true;
         $this->sidebar['modifica']['menu'] = array($menu);
 
-        return $this->sidebar;
+        $menu = $this->menu_item(menu_item_titulo: "Empresas", link: $this->link_alta,menu_lateral_active: true);
+            if(errores::$error){
+                return $this->errores->error(mensaje: 'Error al maquetar menu',data:  $menu);
+            }
+
+            $this->sidebar['empresas']['titulo'] = "Tipos de Empresa";
+            $this->sidebar['empresas']['stepper_active'] = true;
+            $this->sidebar['empresas']['menu'] = array($menu);
+
+            return $this->sidebar;
     }
 
 
