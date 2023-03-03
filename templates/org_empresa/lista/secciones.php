@@ -1,6 +1,6 @@
 <?php /** @var tglobally\tg_empresa\controllers\controlador_org_empresa $controlador */
 $seccion = $controlador->seccion;
-$number = '1.gris';
+$number = '1.azul';
 $session_id = $controlador->session_id;
 ?>
 <div class="col-md-3 secciones">
