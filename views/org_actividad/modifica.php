@@ -10,11 +10,9 @@
         <div class="  form-main" id="form">
             <form method="post" action="<?php echo $controlador->link_modifica_bd;?>" class="form-additional">
 
-                <?php echo $controlador->inputs->codigo; ?>
-                <?php echo $controlador->inputs->codigo_bis; ?>
                 <?php echo $controlador->inputs->descripcion; ?>
                 <?php echo $controlador->inputs->tiempo; ?>
-                <?php echo $controlador->inputs->select->org_tipo_actividad_id; ?>
+                <?php echo $controlador->inputs->org_tipo_actividad_id; ?>
 
                 <div class="buttons col-md-12">
                     <div class="col-md-6">

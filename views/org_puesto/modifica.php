@@ -10,7 +10,6 @@
         <div class="  form-main" id="form">
             <form method="post" action="<?php echo $controlador->link_modifica_bd;?>" class="form-additional">
 
-                <?php echo $controlador->inputs->codigo; ?>
                 <?php echo $controlador->inputs->descripcion; ?>
                 <?php echo $controlador->inputs->org_tipo_puesto_id; ?>
                 <?php echo $controlador->inputs->org_departamento_id; ?>
