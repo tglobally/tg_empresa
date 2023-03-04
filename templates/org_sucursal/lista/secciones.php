@@ -3,7 +3,6 @@
         <div class="col-md-8">
             <h3>Empleados</h3>
             <?php include "templates/org_sucursal/_base/links/alta.php"; ?>
-            <hr class="hr-menu-lateral">
         </div>
     </div>
 </div>

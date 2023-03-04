@@ -18,7 +18,6 @@ $i = 1;
             <?php include "templates/org_sucursal/_base/buttons/1.azul.alta.php"; ?>
             <hr class="hr-menu-lateral">
             <?php include "templates/org_sucursal/_base/buttons/2.gris.registro_patronal.php"; ?>
-            <hr class="hr-menu-lateral">
         </div>
 
     </div>
