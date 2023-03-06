@@ -11,9 +11,9 @@
             <form method="post" action="<?php echo $controlador->link_alta_bd;?>" class="form-additional">
 
                 <?php echo $controlador->inputs->nombre; ?>
+                <?php echo $controlador->inputs->ap_paterno; ?>
+                <?php echo $controlador->inputs->ap_materno; ?>
                 <?php echo $controlador->inputs->rfc; ?>
-                <?php echo $controlador->inputs->a_paterno; ?>
-                <?php echo $controlador->inputs->a_materno; ?>
 
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
