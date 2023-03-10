@@ -14,6 +14,10 @@
                 <?php echo $controlador->inputs->select->org_tipo_puesto_id; ?>
                 <?php echo $controlador->inputs->org_puesto_descripcion; ?>
 
+                <?php echo $controlador->inputs->hidden_row_id; ?>
+                <?php echo $controlador->inputs->hidden_seccion_retorno; ?>
+                <?php echo $controlador->inputs->hidden_id_retorno; ?>
+
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " value="puestos">Guarda</button>
